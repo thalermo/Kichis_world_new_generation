@@ -1,0 +1,46 @@
+.figure_container {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.figure {
+  width: 40rem;
+  height: auto;
+  /* max-width: 80rem; */
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+#hover-me:hover {
+  background: url(/src/images/kichi_figure.png);
+  background-repeat: no-repeat;
+  background-size: 99%;
+
+  /* max-width: 80rem; */
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  /* Animation Figure*/
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  10% {
+    transform: scale(1.1);
+  }
+}
+
+/* @keyframes pulse {
+  0%,
+  100% {
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1.33);
+  }
+} */

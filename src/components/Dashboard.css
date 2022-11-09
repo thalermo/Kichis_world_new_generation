@@ -1,0 +1,234 @@
+/* :root {
+  --bg-color: rgb(255, 255, 255);
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 24;
+  --font-size: 2rem;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.stage {
+  background-image: url(/src/images/wide_screen_bg.png);
+  /* background-size: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  position: relative;
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.figure-btns-wrapper {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bubble_speech--dash {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 22rem;
+  width: 70rem;
+  min-width: 65rem;
+
+  /* background-color: rgb(255, 248, 248); */
+
+  background-image: url(/src/images/Speech_bubble_white.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  /* background-color: cornsilk; */
+  /* background-color: rgb(225, 0, 146); */
+}
+
+/* .user-input {
+  font-family: 'retro-gaming';
+  font-size: 3rem;
+  width: 95%;
+} */
+
+/* Animation typing text */
+.type_effect--dash {
+  font-family: retro-gaming, Courier, monospace;
+  position: relative;
+  left: 2.7rem;
+  bottom: 1rem;
+  /*! Font size*/
+  font-size: 2rem;
+  width: max-content;
+  background: rgb(255, 255, 255);
+
+  /** to center the typing text  and filling the gap of the background*/
+  /* margin-bottom: 8%;
+  margin-left: 1%;
+  padding: 3rem; */
+}
+
+.type_effect--dash.quote {
+  font-family: retro-gaming, Courier, monospace;
+  position: relative;
+  left: 4rem;
+  bottom: 1rem;
+  /*! Font size*/
+  font-size: 3rem;
+  width: max-content;
+  background: rgb(255, 255, 255);
+
+  /** to center the typing text  and filling the gap of the background*/
+  /* margin-bottom: 8%;
+  margin-left: 1%;
+  padding: 3rem; */
+}
+
+.type_effect--dash::before,
+.type_effect--dash::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.type_effect--dash::before {
+  background: rgb(255, 255, 255);
+  animation: typewriter 3s steps(24) 1s forwards;
+}
+
+.type_effect--dash::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter 3s steps(24) 1s forwards, blink 750ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#yt-link {
+  position: absolute;
+  bottom: 2em;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.72);
+
+  &:hover,
+  &:focus {
+    color: teal;
+  }
+}
+
+input::placeholder {
+  font-size: 18px;
+}
+
+.top-stage {
+  display: block;
+  width: 100vw;
+  height: 20rem;
+}
+
+.turnon-image {
+  width: 10rem;
+  height: 10rem;
+  background-image: url(/src/images/switch_on_pixelv4.png);
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  margin-bottom: 30rem;
+  margin-right: -10rem;
+}
+
+.turnon-image:hover {
+  background: url(/src/images/switch_on_hover_vol.2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+
+  /* max-width: 80rem; */
+  /* -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; */
+  /* Animation Figure*/
+  /* animation: pulse 2.5s infinite; */
+}
+
+.submit-btn#enter {
+  margin-right: 3rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.starts-container1 {
+  width: 6rem;
+  height: 30rem;
+  /* background-color: green; */
+  /* background-color: green; */
+  margin-bottom: 10rem;
+  /* margin-right: -7rem; */
+  /* margin-top: 1rem; */
+  /* z-index: 1; */
+  margin-left: -30rem;
+  padding-right: 25rem;
+}
+
+.starts-container2 {
+  width: 6rem;
+  height: 24rem;
+  background-color: red;
+  margin-bottom: 10rem;
+  /* margin-left: -7rem; */
+  /* z-index: 1; */
+
+  /* transform: rotate(90deg); */
+  /* opacity: 0.5; */
+}
+
+.motivation-star {
+  width: 6rem;
+  height: 6rem;
+  background-image: url(../images/start_pixeled_vol3.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.motivation-star:hover {
+  width: 6rem;
+  height: 6rem;
+  background-image: url(../images/start_pixeled_vol3_hover.png);
+}
+
+/* hide the starts according to the condition from row 187-212 dash.jsx*/
+.motivation-star.hidden,
+.motivation-star:hover.hidden {
+  opacity: 0;
+}

@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'Press Start 2p';
+}
+
+.continue {
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.plus-minus--buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: max-content;
+  height: max-content;
+  margin-top: 25rem;
+  margin-left: 1.5rem;
+}
+
+/*! Plus Minus Btns */
+.video-game-button {
+  text-shadow: 1px 1px pink, -1px -1px maroon;
+  font-size: 7rem;
+  border-radius: 100%;
+  font-family: 'Press Start 2p';
+  line-height: 5em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  border-radius: 20em;
+  background-color: red;
+  -webkit-box-shadow: 0 0.2em maroon;
+  -moz-box-shadow: 0 0.2em maroon;
+  -o-box-shadow: 0 0.2em maroon;
+  box-shadow: 0 0.2em maroon;
+  color: red;
+  margin: 5px;
+  background-color: red;
+  background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+  background-image: -moz-linear-gradient(
+    left top,
+    pink 3%,
+    red 22%,
+    maroon 99%
+  );
+  background-image: -webkit-linear-gradient(
+    left top,
+    pink 3%,
+    red 22%,
+    maroon 99%
+  );
+  background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.video-game-button.plus {
+  background: url(../../images/thumbs_up.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 8rem;
+  margin-left: -8rem;
+  z-index: 1;
+}
+
+.video-game-button.plus:hover {
+  background: url(/src/images/thumbs_up_hover_vol2.png);
+  background-repeat: no-repeat;
+  background-size: 99%;
+  z-index: 1;
+
+  /* max-width: 80rem; */
+  /* -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  /* Animation Figure*/
+  /* animation: pulse 2.5s infinite;  */
+}
+
+.video-game-button.minus {
+  background: url(../../images/thumbs_down.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  font-size: 8rem;
+  margin-right: -6rem;
+  z-index: 1;
+}
+
+.video-game-button.minus:hover {
+  background: url(/src/images/thumbs_up_hover_vol3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  z-index: 1;
+
+  /* max-width: 80rem; */
+  /* -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  /* Animation Figure*/
+  /* animation: pulse 2.5s infinite;  */
+}
+
+.StartButton_container {
+  width: 12%;
+}
+
+.start-btn {
+  font-size: 20pt;
+  font-family: 'Press Start 2p';
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  margin: 5px;
+  font-weight: bold;
+  padding: 10px 0 10px 10px;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.2em gray;
+  cursor: pointer;
+}
+.video-game-button:active,
+.start-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.2em;
+}
+
+/*! --------- SUBMIT BTN ---------------*/
+
+.submit-btn {
+  font-family: 'retro-gaming';
+  font-size: 2rem;
+
+  width: 25rem;
+  height: 6rem;
+
+  cursor: pointer;
+  transition: 0.5s;
+
+  font-size: 2.5rem;
+  background: white;
+  padding: 0.3rem 3.4rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+}
+
+.submit-btn:last-child {
+  margin: 0;
+}
+
+.submit-btn:hover {
+  font-size: 3rem;
+  background: #ffff03f8;
+  box-shadow: 1rem 0.4rem 0 rgb(0, 0, 0);
+  transform: translate(-0.4rem, -0.4rem);
+  border: dotted black 4px;
+}
+
+.submit-btn:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+
+.reg-btn {
+  background-image: url(../../images/loginBtnvol1.png);
+  width: 8rem;
+  height: 8rem;
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.reg-btn:hover {
+  background-image: url(../../images/loginBtnvol1_hover.png);
+}
+
+.logInIcon {
+  background-image: url(../../images/login_icon_vol1.png);
+  width: 8rem;
+  height: 8rem;
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.logInIcon:hover {
+  background-image: url(../../images/login_icon_vol3.png);
+}
+
+.returnIcon {
+  background-image: url(../../images/home_icon.png);
+  width: 6rem;
+  height: 6rem;
+  background-size: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  margin: 1rem;
+}
+
+.returnIcon:hover {
+  background-image: url(../../images/home_icon_hover_vol1.png);
+}
+
+/* hide class to control the option to click*/
+.hide {
+  opacity: 0;
+}

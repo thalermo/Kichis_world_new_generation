@@ -1,0 +1,9 @@
+.quotes-frame {
+  height: 100vh;
+  background-color: blueviolet;
+}
+
+.get-quote {
+  width: 100px;
+  height: 70px;
+}
