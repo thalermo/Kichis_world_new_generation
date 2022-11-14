@@ -11,7 +11,8 @@
 }
 
 .stage {
-  background-image: url(/src/images/wide_screen_bg.png);
+  /* background-image: url(/src/images/wide_screen_bg.png); */
+  background-image: url(../assets/images/background/wide_screen_bg.png);
   /* background-size: 100%; */
   display: flex;
   flex-direction: column;
@@ -43,7 +44,8 @@
 
   /* background-color: rgb(255, 248, 248); */
 
-  background-image: url(/src/images/Speech_bubble_white.png);
+  /* background-image: url(/src/images/Speech_bubble_white.png); */
+  background-image: url(../assets/images/icons/Speech_bubble_white.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -156,7 +158,8 @@ input::placeholder {
 .turnon-image {
   width: 10rem;
   height: 10rem;
-  background-image: url(/src/images/switch_on_pixelv4.png);
+  /* background-image: url(/src/images/switch_on_pixelv4.png); */
+  background-image: url(../assets/images/icons/switch_on_pixelv4.png);
   background-size: 10rem;
   background-repeat: no-repeat;
   margin-bottom: 30rem;
@@ -164,7 +167,8 @@ input::placeholder {
 }
 
 .turnon-image:hover {
-  background: url(../assets/images/switch_on_hover_vol.2.png);
+  /* background: url(../assets/images/switch_on_hover_vol.2.png); */
+  background: url(../assets/images/icons/switch_on_hover_vol.2.png);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -215,7 +219,7 @@ input::placeholder {
 .motivation-star {
   width: 6rem;
   height: 6rem;
-  background-image: url(../assets/images/start_pixeled_vol3.png);
+  background-image: url(../assets/images/icons/start_pixeled_vol3.png);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -224,7 +228,7 @@ input::placeholder {
 .motivation-star:hover {
   width: 6rem;
   height: 6rem;
-  background-image: url(../assets/images/start_pixeled_vol3_hover.png);
+  background-image: url(../assets/images/icons/start_pixeled_vol3_hover.png);
 }
 
 /* hide the starts according to the condition from row 187-212 dash.jsx*/

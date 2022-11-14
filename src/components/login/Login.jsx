@@ -1,4 +1,4 @@
-import "./Login.css";
+import "./login.css";
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { RegBtn } from '../assets/Buttons';

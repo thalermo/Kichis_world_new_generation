@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './Todo.css';
+import './todo.css';
 import { ReturnIcon, TodoBtn } from './Buttons';
 
 const Todo = () => {

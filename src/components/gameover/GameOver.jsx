@@ -1,4 +1,4 @@
-import './GameOver.css';
+import './gameOver.css';
 
 const GameOver = () => {
   return <div className="game-over-screen"></div>;

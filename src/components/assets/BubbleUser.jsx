@@ -1,6 +1,6 @@
 // import welcome from "./bubble_texts/welcome_text";
 import React, { useState } from 'react';
-import './assets/bubbles.css';
+import './bubbles.css';
 import welcome from '../bubble_texts/welcome_text';
 
 function BubbleUser() {

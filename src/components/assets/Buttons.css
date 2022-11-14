@@ -61,7 +61,8 @@
 }
 
 .video-game-button.plus {
-  background: url(../../images/thumbs_up.png);
+  /* background: url(../../images/thumbs_up.png); */
+  background: url(../assets/images/icons/thumbs_up.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -71,7 +72,8 @@
 }
 
 .video-game-button.plus:hover {
-  background: url(/src/images/thumbs_up_hover_vol2.png);
+  /* background: url(/src/images/thumbs_up_hover_vol2.png); */
+  background: url(../assets/images/icons/thumbs_up_hover_vol2.png);
   background-repeat: no-repeat;
   background-size: 99%;
   z-index: 1;
@@ -86,7 +88,8 @@
 }
 
 .video-game-button.minus {
-  background: url(../../images/thumbs_down.png);
+  /* background: url(../../images/thumbs_down.png); */
+  background: url(../assets/images/icons/thumbs_down.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 110%;
@@ -96,7 +99,8 @@
 }
 
 .video-game-button.minus:hover {
-  background: url(/src/images/thumbs_up_hover_vol3.png);
+  /* background: url(/src/images/thumbs_up_hover_vol3.png); */
+  background: url(../assets/images/icons/thumbs_up_hover_vol3.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 110%;
@@ -183,7 +187,8 @@
 }
 
 .reg-btn {
-  background-image: url(../../images/loginBtnvol1.png);
+  background-image: url(../assets/images/icons/loginBtnvol1.png);
+  /* background-image: url(../../images/loginBtnvol1.png); */
   width: 8rem;
   height: 8rem;
   background-size: 100%;
@@ -194,11 +199,13 @@
 }
 
 .reg-btn:hover {
-  background-image: url(../../images/loginBtnvol1_hover.png);
+  background-image: url(../assets/images/icons/loginBtnvol1_hover.png);
+  /* background-image: url(../../images/loginBtnvol1_hover.png); */
 }
 
 .logInIcon {
-  background-image: url(../../images/login_icon_vol1.png);
+  background-image: url(../assets/images/icons/login_icon_vol1.png);
+  /* background-image: url(../../images/login_icon_vol1.png); */
   width: 8rem;
   height: 8rem;
   background-size: 100%;
@@ -209,11 +216,13 @@
 }
 
 .logInIcon:hover {
-  background-image: url(../../images/login_icon_vol3.png);
+  background-image: url(../assets/images/icons/login_icon_vol3.png);
+  /* background-image: url(../../images/login_icon_vol3.png); */
 }
 
 .returnIcon {
-  background-image: url(../../images/home_icon.png);
+  background-image: url(../assets/images/icons/home_icon.png);
+  /* background-image: url(../../images/home_icon.png); */
   width: 6rem;
   height: 6rem;
   background-size: 100%;
@@ -224,7 +233,8 @@
 }
 
 .returnIcon:hover {
-  background-image: url(../../images/home_icon_hover_vol1.png);
+  background-image: url(../assets/images/icons/home_icon_hover_vol1.png);
+  /* background-image: url(../../images/home_icon_hover_vol1.png); */
 }
 
 /* hide class to control the option to click*/

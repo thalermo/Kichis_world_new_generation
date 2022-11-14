@@ -16,7 +16,7 @@ import {
   getRandomQuote,
 } from '../assets/motivationalQuotes';
 
-import './Dashboard.css';
+import "./dashboard.css";
 
 //import MotivationalQuotes from './assets/MotivationalQuotes';
 

@@ -1,5 +1,5 @@
 //! READY TO USE, waiting for routing
-import './Registration.css';
+import './registration.css';
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';

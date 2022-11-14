@@ -1,4 +1,4 @@
-import "./Buttons.css"
+import "./buttons.css"
 
 export const PlusButton = (props) => {
   return (
