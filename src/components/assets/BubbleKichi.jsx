@@ -1,6 +1,6 @@
 // import welcome from "./bubble_texts/welcome_text";
 
-import '../Dashboard.css';
+import "../dashboard/Dashboard.css"
 import React, { useState, useEffect } from 'react';
 
 function BubbleKichi(props) {

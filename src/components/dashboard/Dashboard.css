@@ -164,7 +164,7 @@ input::placeholder {
 }
 
 .turnon-image:hover {
-  background: url(/src/images/switch_on_hover_vol.2.png);
+  background: url(../assets/images/switch_on_hover_vol.2.png);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
@@ -215,7 +215,7 @@ input::placeholder {
 .motivation-star {
   width: 6rem;
   height: 6rem;
-  background-image: url(../images/start_pixeled_vol3.png);
+  background-image: url(../assets/images/start_pixeled_vol3.png);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -224,7 +224,7 @@ input::placeholder {
 .motivation-star:hover {
   width: 6rem;
   height: 6rem;
-  background-image: url(../images/start_pixeled_vol3_hover.png);
+  background-image: url(../assets/images/start_pixeled_vol3_hover.png);
 }
 
 /* hide the starts according to the condition from row 187-212 dash.jsx*/

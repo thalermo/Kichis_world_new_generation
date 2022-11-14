@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // script js file with array and objects
-import welcome from './bubble_texts/welcome_text';
+import welcome from '../bubble_texts/welcome_text';
 // figure bubble speech above and user bubble underneath the figure
-import BubbleKichi from './assets/BubbleKichi';
+import BubbleKichi from '../assets/BubbleKichi';
 // just the figure with click function
-import Kichi from './assets/Kichi';
+import Kichi from '../assets/Kichi';
 // the btns components
-import { MinusButton, PlusButton, Tasuku, TurnonBtn } from './assets/Buttons';
+import { MinusButton, PlusButton, Tasuku, TurnonBtn } from '../assets/Buttons';
 
 // CSS files:
 import {
   getQuote,
   shortQuotes,
   getRandomQuote,
-} from './assets/motivationalQuotes';
+} from '../assets/motivationalQuotes';
 
 import './Dashboard.css';
 

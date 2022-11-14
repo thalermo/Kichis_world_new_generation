@@ -1,10 +1,13 @@
 //import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Registration from './components/Registration';
-import Dashboard from './components/Dashboard';
+
+// Pages components
+import Login from './components/login/Login';
+import Registration from './components/registration/Registration';
+import Dashboard from "./components/dashboard/Dashboard.jsx"
+import GameOver from './components/gameover/GameOver';
+
 import Todo from './components/assets/Todo';
-import GameOver from './components/GameOver';
 
 // CSS files:
 
@@ -31,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} exact />
+        <Route path="/" element={<Login />} exact />
         <Route path="/reg" element={<Registration />} />
         <Route path="/dash" element={<Dashboard />} />
         <Route path="/todo" element={<Todo />} />

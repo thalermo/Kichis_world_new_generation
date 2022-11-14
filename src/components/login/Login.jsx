@@ -1,16 +1,11 @@
-//! READY TO USE, waiting for routing
-
-import './Home.css';
+import "./Login.css";
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { RegBtn } from './assets/Buttons';
+import { RegBtn } from '../assets/Buttons';
 
-//import welcome from './bubble_texts/welcome_text';
-
-const Home = () => {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  //const [userName, setUserName] = useState('');
   const [show, setShow] = useState(false);
   const [isMouseOver, setMouseOver] = useState(false);
 
@@ -18,19 +13,17 @@ const Home = () => {
   let currentUser;
   let currentUserHP;
 
+  // Timer 8 sec to change the prompt to login instruction!
   useEffect(() => {
     setInterval(() => setShow(true), 8000);
   }, []);
 
-  // const handleLogout = () => {
-  //   localStorage.removeItem('loggedIn');
-
-  //   alert('click');
-  // };
-
   const handleLogin = () => {
+    // getting the item from the localStorage and convert it to JS syntax
+    // this item has been created in the registration page
     const users = JSON.parse(localStorage.getItem('users'));
-    // start to write a loop like js6 for of!
+
+    // Using the For of loop, optional since the ES6
     let i = 0;
     for (let user of users) {
       if (user.email === email && user.password === password) {
@@ -40,6 +33,7 @@ const Home = () => {
 
     // if it's true, then iterate by one and show me the message
     if (i === 1) {
+      // set 2 new items in the localStorage
       alert('Login Successful');
       localStorage.setItem('loggedIn', 'yes');
       localStorage.setItem('currentUser', email);
@@ -161,6 +155,6 @@ const Home = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Home;
+export default Login;

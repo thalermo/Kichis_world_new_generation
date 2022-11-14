@@ -3,7 +3,7 @@ import './Registration.css';
 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogInIcon } from './assets/Buttons';
+import { LogInIcon } from '../assets/Buttons';
 //import welcome from './bubble_texts/welcome_text';
 
 const Registration = () => {

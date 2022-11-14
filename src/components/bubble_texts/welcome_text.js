@@ -1,5 +1,4 @@
 // welcome page
-
 // getting the data from the local storage
 
 const welcome = [
