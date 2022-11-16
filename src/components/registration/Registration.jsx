@@ -1,43 +1,55 @@
-//! READY TO USE, waiting for routing
+// CSS Stylesheets:
 import './registration.css';
+import { LogInIcon } from '../assets/Buttons';
 
+// React libraries 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogInIcon } from '../assets/Buttons';
-//import welcome from './bubble_texts/welcome_text';
 
-const Registration = () => {
+
+function Registration() {
+
+  // States for the registration information 
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [conPassword, setConPassword] = useState('');
 
+  // states for the error messages (e = error message)  
   const [eUserName, setEUserName] = useState('');
   const [eEmail, setEEmail] = useState('');
   const [ePassword, setEPassword] = useState('');
   const [eConPassword, setEConPassword] = useState('');
 
+
+  console.log(eUserName);
+  // States from the valid or error colors 
+  // (u = user, e = email, p = password, conP = confirm Password)
   const [uColor, setUColor] = useState('');
   const [eColor, setEColor] = useState('');
   const [pColor, setPColor] = useState('');
   const [conPcolor, setConPcolor] = useState('');
 
+  // boolean state 
   const [show, setShow] = useState(false);
+
+  // React router property 
   const navigate = useNavigate();
-  // user health points
+
+  // user health points, starting points variable 
   const healthPoints = 5;
-  //const [status, setStatus] = useState('');
 
-  // declaring a new user object
-  // const [newUser, setNewUser] = useState({});
-
+  // Timer - 8 sec for the prompt instruction in the bubble text 
   useEffect(() => {
     setInterval(() => setShow(true), 8000);
   }, []);
 
+  // Validation function of the entered by the user information in the inputs 
   const validate = () => {
     console.log(userName, email, password, conPassword);
 
+    // #### conditions for the form validation 
+    // 1. user name 
     if (userName.length > 1) {
       setEUserName('');
       setUColor('green');
@@ -46,6 +58,7 @@ const Registration = () => {
       setUColor('red');
     }
 
+    // 2. email
     if (email.includes('@') && email.includes('.com')) {
       setEEmail('');
       setEColor('green');
@@ -53,7 +66,8 @@ const Registration = () => {
       setEEmail('Must be a valid email address');
       setEColor('red');
     }
-    // Change it again
+
+    // password
     if (password.length > 4) {
       setEPassword('');
       setPColor('green');
@@ -62,6 +76,7 @@ const Registration = () => {
       setPColor('red');
     }
 
+    // confirm password
     if (password !== '' && password === conPassword) {
       setEConPassword('');
       setConPcolor('green');
@@ -71,16 +86,21 @@ const Registration = () => {
     }
   };
 
-  //console.log(status);
-
   const registerUser = (event) => {
+    // prevent the form to be rendered 
     event.preventDefault();
+
+    // last condition step, if all the registrations fields are green, 
+    //new user will be created
+
     if (
       uColor === 'green' &&
       eColor === 'green' &&
       pColor === 'green' &&
       conPcolor === 'green'
     ) {
+
+      // create a time stamp for the registration date
       const today = new Date();
       const registrationDate =
         today.getFullYear() +
@@ -89,7 +109,8 @@ const Registration = () => {
         '-' +
         (today.getDay() + 1);
 
-      let myUser = {
+      // create an object of the new user with all the registration data 
+      let newUser = {
         userName: userName,
         email: email,
         password: password,
@@ -100,10 +121,17 @@ const Registration = () => {
         hp: healthPoints,
         // conPassword: conPassword,
       };
+
+      // #### localStorage ######
+      // 1. creating the path and the access for the localStorage
       const users = JSON.parse(localStorage.getItem('users') || '[]');
-      //! push the information to the last property in the welcome array
-      users.push(myUser);
+      console.log(users);
+
+      // 2. push to object, (newUser) to the localStorage array, users 
+      users.push(newUser);
       localStorage.setItem('users', JSON.stringify(users));
+
+      // react-route, navigate to the homepage after successfully registered 
       alert('Registration is successful');
       navigate('/');
     } else {
@@ -111,19 +139,28 @@ const Registration = () => {
     }
   };
 
-  //! LogIn Icon with onmouseover, Out, action etc.
-  const [isMouseOver, setMouseOver] = useState(false);
-  const handleLogInEntry = () => {
-    navigate('/');
-  };
 
+  // ##### LogIn Icon with onmouseover, Out, action etc.
+  // Mouseover change the prompt in the bubble chat 
+
+  // 1. creating a boolean state 
+  const [isMouseOver, setMouseOver] = useState(false);
+
+  // 2. mouseover set the state to true 
   const handleMouseOver = () => {
     setMouseOver(true);
   };
 
+  // 3. mouseout set the state to false 
   const handleMouseOut = () => {
     setMouseOver(false);
   };
+
+  // react-route, navigate to the homepage after clicking on the icon 
+  const handleLogInEntry = () => {
+    navigate('/');
+  };
+
 
   return (
     <div className="reg">
