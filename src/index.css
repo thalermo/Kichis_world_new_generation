@@ -1,10 +1,27 @@
 * {
-  margin: 0;
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: 'retro-gaming';
 }
-body {
+
+:root {
+  --transition: all 400ms ease;
+}
+
+@font-face {
+  font-family: 'retro-gaming';
+  src: url(/src/fonts/Retro_Gaming.ttf);
+  font-style: normal;
+}
+
+html {
   /* width: 100vw; */
-  height: 100vh;
+}
+
+body {
+  /* height: 100vh; */
   background-color: cornsilk;
   /* display: flex;
   flex-direction: column;

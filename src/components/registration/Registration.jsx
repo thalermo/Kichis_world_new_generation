@@ -1,4 +1,4 @@
-// CSS Stylesheets:
+// CSS Stylesheets
 import './registration.css';
 import { LogInIcon } from '../assets/Buttons';
 
@@ -67,7 +67,7 @@ function Registration() {
       setEColor('red');
     }
 
-    // password
+    // 3. password
     if (password.length > 4) {
       setEPassword('');
       setPColor('green');
@@ -76,7 +76,7 @@ function Registration() {
       setPColor('red');
     }
 
-    // confirm password
+    // 4. confirm password
     if (password !== '' && password === conPassword) {
       setEConPassword('');
       setConPcolor('green');
@@ -86,13 +86,15 @@ function Registration() {
     }
   };
 
+  // ### user registrations function 
   const registerUser = (event) => {
     // prevent the form to be rendered 
     event.preventDefault();
 
-    // last condition step, if all the registrations fields are green, 
-    //new user will be created
+    // condition to check the validation process
+    // if all the registrations fields are green, new user will be created
 
+    // condition, states ate green? 
     if (
       uColor === 'green' &&
       eColor === 'green' &&
@@ -100,7 +102,7 @@ function Registration() {
       conPcolor === 'green'
     ) {
 
-      // create a time stamp for the registration date
+      // 1. create a time stamp for the registration date
       const today = new Date();
       const registrationDate =
         today.getFullYear() +
@@ -109,7 +111,7 @@ function Registration() {
         '-' +
         (today.getDay() + 1);
 
-      // create an object of the new user with all the registration data 
+      // 2. create an object of the new user with all the registration data 
       let newUser = {
         userName: userName,
         email: email,
@@ -122,7 +124,9 @@ function Registration() {
         // conPassword: conPassword,
       };
 
-      // #### localStorage ######
+      // 3. insert the information in the localStorage
+
+      // #### START localStorage ######
       // 1. creating the path and the access for the localStorage
       const users = JSON.parse(localStorage.getItem('users') || '[]');
       console.log(users);
@@ -130,8 +134,9 @@ function Registration() {
       // 2. push to object, (newUser) to the localStorage array, users 
       users.push(newUser);
       localStorage.setItem('users', JSON.stringify(users));
+      // #### END localStorage ######
 
-      // react-route, navigate to the homepage after successfully registered 
+      // 4. React-route, navigate to the homepage after successfully registered 
       alert('Registration is successful');
       navigate('/');
     } else {
@@ -163,9 +168,12 @@ function Registration() {
 
 
   return (
-    <div className="reg">
-      <div className=" frame reg">
-        <div id="bubbleReg" className="bubble_speech_bg">
+    <div className="registration-page container">
+
+      <div className=" registration-form container">
+
+        {/* #### START HEADER FIGURE + PROMPT  */}
+        <header id="bubbleReg" className="prompt__bubble-speech">
           {!show && !isMouseOver && (
             <h1 className="type_effect title">Welcome to Kichi's World!</h1>
           )}
@@ -177,9 +185,11 @@ function Registration() {
               Click on this button to login!
             </h1>
           )}
-        </div>
+          <div className="brand-logo pixel-border" />
+        </header>
+        {/* #### END HEADER FIGURE + PROMPT  */}
 
-        <div className="brand-logo pixel-border"></div>
+        {/* START FORM CONTAINER */}
         {/* Added the submit form to send data to the local storage   */}
         <form className="form-inputs" onSubmit={registerUser}>
           <div className="input-field">

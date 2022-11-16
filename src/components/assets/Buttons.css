@@ -206,9 +206,12 @@
 .logInIcon {
   background-image: url(../assets/images/icons/login_icon_vol1.png);
   /* background-image: url(../../images/login_icon_vol1.png); */
+
   width: 8rem;
   height: 8rem;
+
   background-size: 100%;
+  background-repeat: no-repeat;
   position: absolute;
   right: 0;
   bottom: 0;
