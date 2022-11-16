@@ -151,19 +151,14 @@ input.form-input {
 
 /* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
 @media screen and (max-width: 1024px) {
-  .registration-page.container {
+  .brand-logo {
+    right: -4%;
+    top: -5%;
   }
 }
 
 /* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
 @media screen and (max-width: 600px) {
-  * {
-    transition: all 300ms ease;
-  }
-
-  .registration-page.container {
-  }
-
   .prompt__bubble-speech {
     background-size: 100% 90%;
   }

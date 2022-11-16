@@ -4,6 +4,7 @@
   margin: 0;
   font-size: 10px;
   font-family: 'retro-gaming';
+  transition: all 300ms ease;
 }
 
 :root {
