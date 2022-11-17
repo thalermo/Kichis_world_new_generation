@@ -161,12 +161,12 @@ function Login() {
           )}
         </div>
 
-        <div className="form-inputs ">
+        <div className="form-inputs-box ">
           <div className="input-field ">
             <input
               type="text"
               placeholder="email"
-              className="form-input"
+              className="form__input"
               // style={{ borderColor: eColor }}
               value={email}
               onChange={(e) => {
@@ -179,7 +179,7 @@ function Login() {
             <input
               type="password"
               placeholder="password"
-              className="form-input"
+              className="form__input"
               // style={{ borderColor: pColor }}
               value={password}
               onChange={(e) => {

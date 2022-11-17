@@ -191,12 +191,12 @@ function Registration() {
 
         {/* START FORM CONTAINER */}
         {/* Added the submit form to send data to the local storage   */}
-        <form className="form-inputs" onSubmit={registerUser}>
+        <form className="form-inputs-box" onSubmit={registerUser}>
           <div className="input-field">
             <input
               type="text"
               placeholder="name"
-              className="form-input"
+              className="form__input"
               style={{ borderColor: uColor }}
               value={userName}
               onChange={(e) => {
@@ -209,7 +209,7 @@ function Registration() {
             <input
               type="text"
               placeholder="email"
-              className="form-input"
+              className="form__input"
               style={{ borderColor: eColor }}
               value={email}
               onChange={(e) => {
@@ -222,7 +222,7 @@ function Registration() {
             <input
               type="password"
               placeholder="password"
-              className="form-input"
+              className="form__input"
               style={{ borderColor: pColor }}
               value={password}
               onChange={(e) => {
@@ -235,7 +235,7 @@ function Registration() {
             <input
               type="password"
               placeholder="confirm password"
-              className="form-input"
+              className="form__input"
               style={{ borderColor: conPcolor }}
               value={conPassword}
               onChange={(e) => {

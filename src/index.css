@@ -18,24 +18,24 @@
 }
 
 html {
-  /* width: 100vw; */
 }
 
 body {
-  /* height: 100vh; */
   background-color: cornsilk;
 }
 
 /* ############################ 
-              Layout  
+              LAYOUTS  
   #############################*/
 
+/* PAGE CONTAINER  */
 .page-container {
   height: 100vh;
   display: grid;
   place-items: center;
 }
 
+/* FORM CONTAINER */
 .form-container {
   width: 90%;
   max-width: 60rem;
@@ -47,12 +47,33 @@ body {
   padding-inline: 1rem;
   padding-block-end: 1rem;
 
-  border: #ff0000 solid 2px;
+  /* border: #ff0000 solid 2px; */
   border-radius: 20px;
   box-sizing: border-box;
   background: rgba(236, 240, 243, 0.184);
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 30px white;
   position: relative;
+}
+
+/* FORM'S INPUTS BOX  */
+/* contain the inputs fields and the submit button */
+.form-inputs-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* inputs selectors for the forms */
+.form__input {
+  text-align: left;
+  border: 3px solid black;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+  font-size: 2.5rem;
+  width: 100%;
+  padding: 0.5rem 2rem;
 }
 
 /* ##### Reusable components ##### */
@@ -71,9 +92,9 @@ body {
 }
 
 .prompt__bubble-speech > .title {
-  font-size: 2.3rem;
+  font-size: 2.8rem;
   text-align: center;
-  margin-block-end: 3rem;
+  margin-block-end: 4rem;
 }
 
 /* PRIMARY BUTTON */
@@ -127,6 +148,7 @@ body {
 
   .prompt__bubble-speech > .title {
     width: 90%;
+    font-size: 2.3rem;
   }
 
   .shifter-btn {
