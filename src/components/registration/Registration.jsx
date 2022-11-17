@@ -1,6 +1,6 @@
 // CSS Stylesheets
 import './registration.css';
-import { LogInIcon } from '../assets/Buttons';
+import { LogInIcon, ShifterIcon } from '../assets/Buttons';
 
 // React libraries 
 import { useState, useEffect } from 'react';
@@ -168,12 +168,12 @@ function Registration() {
 
 
   return (
-    <div className="registration-page container">
+    <div className="page-container registration-page">
 
-      <div className=" registration-form container">
+      <div className=" form-container registration-form">
 
         {/* #### START HEADER FIGURE + PROMPT  */}
-        <header id="bubbleReg" className="prompt__bubble-speech">
+        <header id="bubbleReg" className="prompt__bubble-speech registration-page">
           {!show && !isMouseOver && (
             <h1 className="type_effect title">Welcome to Kichi's World!</h1>
           )}
@@ -250,7 +250,8 @@ function Registration() {
             </button>
           </div>
         </form>
-        <LogInIcon
+        <ShifterIcon
+          className="logInIcon"
           action={handleLogInEntry}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}

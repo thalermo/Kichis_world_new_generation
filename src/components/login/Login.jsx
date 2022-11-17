@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 // importing the login button
-import { RegBtn } from '../assets/Buttons';
+import { ShifterIcon } from '../assets/Buttons';
 
 
 function Login() {
@@ -138,9 +138,10 @@ function Login() {
   };
 
   return (
-    <div className="home ">
-      <div className=" frame home">
-        <div className="bubble_home ">
+    <div className="page-container login-page">
+      {/* <div className=" frame home"> */}
+      <div className=" form-container login-form">
+        <div className="prompt__bubble-speech login-page">
 
           {/* when the page loaded, both states are false */}
           {!show && !isMouseHover && (
@@ -194,12 +195,13 @@ function Login() {
             </button>
           </div>
         </div>
-        <RegBtn
+        <ShifterIcon
           action={handleRegisterEntry}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
           isMouseOver={isMouseHover}
           setMouseOver={setMouseHover}
+          className="reg-icon"
         />
       </div>
     </div>

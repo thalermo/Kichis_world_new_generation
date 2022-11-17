@@ -79,32 +79,11 @@ export const TurnonBtn = (props) => {
   return <div className="turnon-image" onClick={props.action} />;
 };
 
-export const RegBtn = (props) => {
+// Shift to registration page, Login page or Logout from the app 
+export const ShifterIcon = (props) => {
   return (
     <div
-      className="reg-btn"
-      onClick={props.action}
-      onMouseOver={props.onMouseOver}
-      onMouseOut={props.onMouseOut}
-    />
-  );
-};
-
-export const LogInIcon = (props) => {
-  return (
-    <div
-      className="logInIcon"
-      onClick={props.action}
-      onMouseOver={props.onMouseOver}
-      onMouseOut={props.onMouseOut}
-    />
-  );
-};
-
-export const ReturnIcon = (props) => {
-  return (
-    <div
-      className="returnIcon"
+      className={props.className}
       onClick={props.action}
       onMouseOver={props.onMouseOver}
       onMouseOut={props.onMouseOut}

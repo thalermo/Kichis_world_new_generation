@@ -186,9 +186,8 @@
   transform: translate(0, 0);
 }
 
-.reg-btn {
+.reg-icon {
   background-image: url(../assets/images/icons/loginBtnvol1.png);
-  /* background-image: url(../../images/loginBtnvol1.png); */
   width: 8rem;
   height: 8rem;
   background-size: 100%;
@@ -198,7 +197,7 @@
   margin: 1rem;
 }
 
-.reg-btn:hover {
+.reg-icon:hover {
   background-image: url(../assets/images/icons/loginBtnvol1_hover.png);
   /* background-image: url(../../images/loginBtnvol1_hover.png); */
 }
@@ -215,7 +214,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .logInIcon:hover {
@@ -243,4 +242,12 @@
 /* hide class to control the option to click*/
 .hide {
   opacity: 0;
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
+@media screen and (max-width: 600px) {
+  .logInIcon {
+    width: 6rem;
+    height: 6rem;
+  }
 }

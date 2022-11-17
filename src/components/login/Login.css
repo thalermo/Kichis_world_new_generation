@@ -1,63 +1,21 @@
-/*! READY TO USE, waiting for routing*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-size: 10px;
-  font-family: 'retro-gaming';
-}
-
-@font-face {
-  font-family: 'retro-gaming';
-  src: url(/src/fonts/Retro_Gaming.ttf);
-  font-style: normal;
-}
-
-.home {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.page-container.login-page {
   background: linear-gradient(to left bottom, #ffffff00, rgba(0, 0, 0, 0.3)),
-    url(/src/images/Login_image_wide.png);
-  background-size: 100%;
+    url(../assets/images/background/Login_image_wide.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.frame.home {
-  gap: 5px;
-  min-width: 70rem;
-  height: 50rem;
-  min-height: 50rem;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-
-  border-radius: 20px;
-  box-sizing: border-box;
-  background: rgba(236, 240, 243, 0.184);
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 30px white;
-  position: relative;
+.form-container.login-form {
+  max-width: 70rem;
 }
 
-.frame.home > .bubble_home {
-  width: 100%;
-  height: 20rem;
-
-  background: url(/src/images/login_bubble.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-
-  /* background-color: aqua; */
+.prompt__bubble-speech.login-page {
+  min-height: 20rem;
+  background-image: url(../assets/images/icons/login_bubble.png);
 }
 
-.bubble_home > .title {
-  font-size: 3rem;
-  margin-top: 6rem;
-  margin-left: 3rem;
+.prompt__bubble-speech.login-page > .title {
 }
 
 .form-inputs {

@@ -24,7 +24,70 @@ html {
 body {
   /* height: 100vh; */
   background-color: cornsilk;
-  /* display: flex;
+}
+
+/* ############################ 
+              Layout  
+  #############################*/
+
+.page-container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 60rem;
+
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  gap: 1rem;
+
+  padding-inline: 1rem;
+  padding-block-end: 1rem;
+
+  border: #ff0000 solid 2px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: rgba(236, 240, 243, 0.184);
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 30px white;
+  position: relative;
+}
+
+/* ##### Reusable components ##### */
+
+.prompt__bubble-speech {
+  display: grid;
+  place-items: center;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  padding-block-start: 1.4rem;
+}
+
+.prompt__bubble-speech > .title {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-block-end: 3rem;
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
+@media screen and (max-width: 600px) {
+  .prompt__bubble-speech {
+    background-size: 100% 90%;
+  }
+
+  .prompt__bubble-speech > .title {
+    width: 80%;
+  }
+
+  .logInIcon {
+    width: 6rem;
+    height: 6rem;
+    margin: 0;
+  }
 }
