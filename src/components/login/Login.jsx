@@ -19,7 +19,7 @@ function Login() {
   const [show, setShow] = useState(false);
 
   // boolean state -  Mouseover change the prompt in the bubble chat 
-  const [isMouseOver, setMouseOver] = useState(false);
+  const [isMouseHover, setMouseHover] = useState(false);
 
   // React routing - Navigation 
   const navigate = useNavigate();
@@ -130,24 +130,30 @@ function Login() {
 
   // Set the states by hover with the mouse on the addUser icon 
   const handleMouseOver = () => {
-    setMouseOver(true);
+    setMouseHover(true);
   };
 
   const handleMouseOut = () => {
-    setMouseOver(false);
+    setMouseHover(false);
   };
 
   return (
     <div className="home ">
       <div className=" frame home">
         <div className="bubble_home ">
-          {!show && !isMouseOver && (
+
+          {/* when the page loaded, both states are false */}
+          {!show && !isMouseHover && (
             <h1 className="type_effect title ">Welcome to Kichi's World!</h1>
           )}
-          {show && !isMouseOver && (
+
+          {/* userEffect & setInterval change the state after 8 sec */}
+          {show && !isMouseHover && (
             <h1 className="type_effect title ">Login to get started</h1>
           )}
-          {isMouseOver && (
+
+          {/* isMouseHover? change the prompt in the bubble chat  */}
+          {isMouseHover && (
             <h1 className="type_effect title ">
               Click on this button to sign up!
             </h1>
@@ -192,8 +198,8 @@ function Login() {
           action={handleRegisterEntry}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
-          isMouseOver={isMouseOver}
-          setMouseOver={setMouseOver}
+          isMouseOver={isMouseHover}
+          setMouseOver={setMouseHover}
         />
       </div>
     </div>
