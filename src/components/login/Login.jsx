@@ -1,15 +1,30 @@
+// Style Sheets:
 import "./login.css";
+
+// React liberties 
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+
+// importing the login button
 import { RegBtn } from '../assets/Buttons';
 
+
 function Login() {
+
+  // states of the login information 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  // boolean state - show the prompt in the bubble chat 
   const [show, setShow] = useState(false);
+
+  // boolean state -  Mouseover change the prompt in the bubble chat 
   const [isMouseOver, setMouseOver] = useState(false);
 
+  // React routing - Navigation 
   const navigate = useNavigate();
+
+  // Creating 2 empty variables 
   let currentUser;
   let currentUserHP;
 
@@ -19,26 +34,34 @@ function Login() {
   }, []);
 
   const handleLogin = () => {
+
+    // ### localStorage ####
     // getting the item from the localStorage and convert it to JS syntax
     // this item has been created in the registration page
     const users = JSON.parse(localStorage.getItem('users'));
 
     // Using the For of loop, optional since the ES6
+    // Looping through all the users to find a match with the user & the password
+    //it's true, then iterate by one and show me the message
     let i = 0;
-    for (let user of users) {
-      if (user.email === email && user.password === password) {
+    for (let el of users) {
+      if (el.email === email && el.password === password) {
         i++;
       }
     }
 
-    // if it's true, then iterate by one and show me the message
+    //### START CONDITION to login to the Dashboard ####
+    //if the variable i ==== 1, it means that there is a match with the login and the password 
+
     if (i === 1) {
-      // set 2 new items in the localStorage
+
+      // ### LocalStorage ###
+      // 1.  set 2 new items in the localStorage
       alert('Login Successful');
       localStorage.setItem('loggedIn', 'yes');
       localStorage.setItem('currentUser', email);
 
-      // Set the time after the login
+      // 2. Set the time after the login
       const today = new Date();
       const currentTime =
         today.getFullYear() +
@@ -47,45 +70,65 @@ function Login() {
         '-' +
         (today.getDay() + 1);
 
+      // ### LocalStorage ###
+      // 3. Get the user item,  currentUser and convert it to js 
       let localEntry = JSON.parse(localStorage.getItem('users'));
       let currentUserEntry = localStorage.getItem('currentUser');
-      //currentUserHP = 4;
 
-      //getting just number
+      // 4. Using fine index to find the position of the users email in the array 
+      // in order to add read and add information 
+      //getting the index number
       let index = localEntry.findIndex(
         (element) => element.email === currentUserEntry
       );
 
+      // 5. Add another property to the existing object in the index position
+      // currentTime is the timeStamp of the login 
       localEntry[index] = {
         ...localEntry[index],
         time: currentTime,
         //hp: currentUserHP,
       };
 
+      // ### localStorage ### 
+      // 6. Replace the item users with the new information (the currentTime property)
       localStorage.setItem('users', JSON.stringify(localEntry));
+
+      //######## STOP HERE ######## I'm not sure what is the purpose of having the info here, checking later ///
 
       // getting the info of the user from the local Storage
       //todo: why I can't update the state
       currentUser = localEntry[index].userName;
       //! access to HP value in the local storage
       currentUserHP = localEntry[index].hp;
-      console.log(currentUser);
-      console.log(currentUserHP);
-      localStorage.setItem('users', JSON.stringify(localEntry));
+      // console.log(currentUser);
+      // console.log(localEntry);
+      // console.log(currentUserEntry);
+
+      //localStorage.setItem('users', JSON.stringify(localEntry));
 
       // setUserName(currentUser);
       // console.log(userName);
 
+      //######## STOP HERE ######## I'm not sure what is the purpose of having the info here, checking later ///
+
+      // 7. Using react routing to navigate to the dashboard 
       navigate('/dash');
+
+      // if there is not a match (let i !== 1) then show a prompt of invalid login 
     } else {
       alert('Invalid Login');
     }
   };
 
+  //### END CONDITION to login to the Dashboard ####
+
+  // HandleClick by clicking on the addUser icon
   const handleRegisterEntry = () => {
     navigate('/reg');
   };
 
+  // Set the states by hover with the mouse on the addUser icon 
   const handleMouseOver = () => {
     setMouseOver(true);
   };
