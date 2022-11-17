@@ -182,11 +182,3 @@
 .hide {
   opacity: 0;
 }
-
-/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
-@media screen and (max-width: 600px) {
-  .logInIcon {
-    width: 6rem;
-    height: 6rem;
-  }
-}

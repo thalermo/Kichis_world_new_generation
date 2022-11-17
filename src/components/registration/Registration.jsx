@@ -185,7 +185,8 @@ function Registration() {
               Click on this button to login!
             </h1>
           )}
-          <div className="brand-logo pixel-border" />
+          {/* TODO: export this feature to a separate component  */}
+          <div className="kichi-logo " />
         </header>
         {/* #### END HEADER FIGURE + PROMPT  */}
 

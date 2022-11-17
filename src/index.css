@@ -57,6 +57,7 @@ body {
 
 /* FORM'S INPUTS BOX  */
 /* contain the inputs fields and the submit button */
+
 .form-inputs-box {
   display: flex;
   flex-direction: column;
@@ -76,9 +77,23 @@ body {
   padding: 0.5rem 2rem;
 }
 
+/* background color in input field helps to be able to read the error message  */
+.input-field {
+  background-color: #242424;
+}
+
+/* Error message by typing wrong or missing information */
+.input-field > small {
+  color: #ff5e5e;
+  text-shadow: 1px 1px #000000;
+  font-size: 1.3rem;
+  padding-inline-start: 1rem;
+}
+
 /* ##### Reusable components ##### */
 
 /* BUBBLE CHAT */
+/* Bubble chat - container */
 .prompt__bubble-speech {
   display: grid;
   place-items: center;
@@ -91,6 +106,7 @@ body {
   padding-block-start: 1.4rem;
 }
 
+/* Bubble chat - prompt */
 .prompt__bubble-speech > .title {
   font-size: 2.8rem;
   text-align: center;
@@ -98,7 +114,6 @@ body {
 }
 
 /* PRIMARY BUTTON */
-
 .primary-btn {
   cursor: pointer;
   font-size: 2.5rem;
@@ -140,6 +155,36 @@ body {
   margin: 0.5rem;
 }
 
+/* KICHIS LOGO */
+/* todo export this feature to a separate component */
+.kichi-logo {
+  position: absolute;
+  right: -10rem;
+  top: -10rem;
+
+  height: 15rem;
+  width: 15rem;
+
+  background: url('../src/components/assets/images/figure/Kich_pixel.png');
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: dotted 5px black;
+  background-color: #dfe9f3;
+
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 0px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px;
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
+@media screen and (max-width: 1024px) {
+  .kichi-logo {
+    right: -4%;
+    top: -5%;
+  }
+}
+
 /* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
 @media screen and (max-width: 600px) {
   .prompt__bubble-speech {
@@ -165,5 +210,12 @@ body {
 
   .primary-btn.signup-btn {
     padding-inline: 3.5rem;
+  }
+
+  .kichi-logo {
+    right: -5%;
+    top: -1%;
+    width: 10rem;
+    height: 10rem;
   }
 }
