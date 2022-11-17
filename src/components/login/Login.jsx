@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 // importing the login button
-import { ShifterIcon } from '../assets/Buttons';
+import { BtnPrimary, ShifterBtn } from '../assets/Buttons';
 
 
 function Login() {
@@ -190,18 +190,19 @@ function Login() {
           </div>
 
           <div className="input-field">
-            <button className="submit-btn login" onClick={handleLogin}>
-              LOGIN
-            </button>
+            <BtnPrimary className="primary-btn login-btn"
+              handleClick={handleLogin}
+              title="LOGIN"
+            />
           </div>
         </div>
-        <ShifterIcon
+        <ShifterBtn
           action={handleRegisterEntry}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
           isMouseOver={isMouseHover}
           setMouseOver={setMouseHover}
-          className="reg-icon"
+          className="shifter-btn reg-icon"
         />
       </div>
     </div>

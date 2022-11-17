@@ -1,6 +1,6 @@
 // CSS Stylesheets
 import './registration.css';
-import { LogInIcon, ShifterIcon } from '../assets/Buttons';
+import { BtnPrimary, ShifterBtn } from '../assets/Buttons';
 
 // React libraries 
 import { useState, useEffect } from 'react';
@@ -245,13 +245,18 @@ function Registration() {
             <small>{eConPassword}</small>
           </div>
           <div className="input-field">
-            <button className="submit-btn reg" onClick={validate}>
+            {/* <button className="submit-btn reg" onClick={validate}>
               SUBMIT
-            </button>
+            </button> */}
+            <BtnPrimary
+              className="primary-btn signup-btn"
+              handleClick={validate}
+              title="SIGN UP"
+            />
           </div>
         </form>
-        <ShifterIcon
-          className="logInIcon"
+        <ShifterBtn
+          className="shifter-btn login-icon"
           action={handleLogInEntry}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './todo.css';
-import { ShifterIcon, TodoBtn } from './Buttons';
+import { ShifterBtn, TodoBtn } from './Buttons';
 
 const Todo = () => {
   const [oneTask, setOneTask] = useState('');
@@ -85,7 +85,7 @@ const Todo = () => {
             }}
           />
           <TodoBtn action={addTask} />
-          <ShifterIcon
+          <ShifterBtn
             className="returnIcon"
             action={handleReturnEntry}
             onMouseOver={handleMouseOver}

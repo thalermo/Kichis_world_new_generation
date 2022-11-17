@@ -80,7 +80,7 @@ export const TurnonBtn = (props) => {
 };
 
 // Shift to registration page, Login page or Logout from the app 
-export const ShifterIcon = (props) => {
+export const ShifterBtn = (props) => {
   return (
     <div
       className={props.className}
@@ -90,3 +90,14 @@ export const ShifterIcon = (props) => {
     />
   );
 };
+
+
+export const BtnPrimary = (props) => {
+  return (
+    <button
+      className={props.className}
+      onClick={props.handleClick}>
+      {props.title}
+    </button>
+  )
+}
