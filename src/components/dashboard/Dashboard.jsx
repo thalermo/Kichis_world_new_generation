@@ -1,34 +1,41 @@
-import React, { useState, useEffect } from 'react';
+// Style Sheets:
+import "./dashboard.css";
+
+// React liberties 
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// script js file with array and objects
+
+//importing script js file with array of objects
 import welcome from '../bubble_texts/welcome_text';
+
 // figure bubble speech above and user bubble underneath the figure
 import BubbleKichi from '../assets/BubbleKichi';
-// just the figure with click function
+
+// just the figure with a click function
 import Kichi from '../assets/Kichi';
 // the btns components
 import { MinusButton, PlusButton, Tasuku, TurnonBtn } from '../assets/Buttons';
 
-// CSS files:
+
 import {
   getQuote,
   shortQuotes,
   getRandomQuote,
 } from '../assets/motivationalQuotes';
 
-import "./dashboard.css";
 
 //import MotivationalQuotes from './assets/MotivationalQuotes';
 
 const Dashboard = () => {
+
   // state for iteration the welcome_text array
   const navigate = useNavigate();
   const [indexCounter, setIndexCounter] = useState(1);
+
   const [quote, setQuote] = useState('');
-  //const [status, setStatus] = useState('');
-  //console.log(status);
-  const [status, setStatus] = useState('');
   const [showQuote, setShowQuote] = useState(false);
+
+  const [status, setStatus] = useState('');
   //const [gameOver, setGameOver] = useState(false);
   // const [updatedPoints, setUpdatedPoints] = useState(false);
 
@@ -50,14 +57,17 @@ const Dashboard = () => {
   //   }
   // }, []);
 
+  // ### LocalsStorage ####
+  // get an access to 2 the data in the LS
   let localEntry = JSON.parse(localStorage.getItem('users'));
   let currentUserEntry = localStorage.getItem('currentUser');
 
-  //getting just number
+  //Using findIndex method to get the position of the current user
   let index = localEntry.findIndex(
     (element) => element.email === currentUserEntry
   );
 
+  // Store the LS information in the following variables:
   let task = localEntry[index].task;
   let userName = localEntry[index].userName;
   let currentUserHP = localEntry[index].hp;
@@ -72,6 +82,7 @@ const Dashboard = () => {
   //taskTime = '2001-3-4';
   //* the logic of the show Tasuku btn, if the task is empty and also if the day is over. check line 167 🫡
 
+  // TIME CONDITION: if the login date not equal to the time, that the task has been created, delete the task and send the new info to the localStorage
   if (now !== taskTime) {
     localEntry[index] = {
       ...localEntry[index],
@@ -81,22 +92,26 @@ const Dashboard = () => {
     //setShow(false);
   }
 
-  //! clicking on the figure will iterating the text array
+
+  // PROMPT TRIGGER by clicking on the figure 
   const handleFigureClick = () => {
-    setIndexCounter(indexCounter + 1);
+    setIndexCounter((pervValue) => pervValue + 1)
   };
 
+  // Click on the Tasuku button will lead to the TODO PAGE
   const handleClick = () => {
     setStatus('tasuku');
     navigate('/todo');
   };
 
+  // Scenario Nr. 01 : Clicking on the thumbs up 👍
   const handleComplete = () => {
     alert("you complete your Tasuku! I'm so proud of you" + userName);
+
+    // Updating the variable of the HP + 1
     currentUserHP++;
-    //alert(currentUserHP);
-    //SetHpValue(currentUserHP + 1);
-    //currentUserHP++;
+
+    // CONDITIONS: POINT SYSTEM by completing the task 
     if (currentUserHP >= 5) {
       alert('start🌟');
     } else if (currentUserHP === 4) {
@@ -111,23 +126,30 @@ const Dashboard = () => {
       alert('GAME OVER');
     }
 
-    //! GAME OVER LOGIC
-
+    // ### localStorage ###
+    // Update the health points 
     localEntry[index] = {
       ...localEntry[index],
       hp: currentUserHP,
     };
+
+    // Send the information to teh localStorage 
     localStorage.setItem('users', JSON.stringify(localEntry));
+
+    // updated the health points in the state  State
     SetHpValue(currentUserHP);
     alert('hey from the scope');
-    // updatedPoints State
   };
 
+  // Scenario Nr. 02 : Clicking on the thumbs down 👎
   const handleFailed = () => {
     alert(userName + "This time you didn't completed the Tasuku:/");
 
     //currentUserHP = currentUserHP <= 5 ? currentUserHP - 1 : 5;
+    //MATH.MIN METHOD: to reset the given points to 5 or less:
+    //by clicking on thumbs down, reset first the points to 5 or decrease for example 1 point from 5 one point 
     currentUserHP = Math.min(currentUserHP - 1, 5);
+    // CONDITIONS: POINT SYSTEM by not completing the task 
     if (currentUserHP >= 5) {
       alert('you lost your stars 👹🌟');
     } else if (currentUserHP === 4) {
@@ -142,48 +164,70 @@ const Dashboard = () => {
       alert('GAME OVER');
     }
 
-    //! GAME OVER LOGIC
     //todo: to solve the empty object thing with Marc
     console.log(currentUserHP);
 
+    // CONDITION: User got greater points then 0 >>
+    // Update the points and show a motivational quote
     if (currentUserHP > 0) {
+      // 1. update the property currentUserHP
       localEntry[index] = {
         ...localEntry[index],
         hp: currentUserHP,
       };
-
+      // 2. Send the updated Object to the localStorage
       localStorage.setItem('users', JSON.stringify(localEntry));
-      SetHpValue(currentUserHP);
-      console.log(currentUserHP);
-      console.log('update hp');
 
+      // 3. Update the HPValue state that contain the user HP 
+      SetHpValue(currentUserHP);
+      // console.log(currentUserHP);
+      // console.log('update hp');
+
+      // 4. Get motivational quotes from external API
       getQuote().then((data) => {
         let short = shortQuotes(data);
         let randomQuote = getRandomQuote(short);
+        // Store the single Quote in an initial state 
         setQuote(randomQuote);
+        // Use a boolean to show the Quote in the Bubble chat prompt 
         setShowQuote(true);
       });
+
     } else {
-      //localEntry[index] = {};
-      // remove the user after game over
+      // CONDITION: OTHERWISE DELETE THE USER DATA AND LOGOUT FROM THE APP
+      // Remove the user from the localStorage, using the splice method 
+      // SpliceMethod = target the index(object position in the array and delete it)
       localEntry.splice(index, 1);
+
+      // Send the updated info the the localStorage
       localStorage.setItem('users', JSON.stringify(localEntry));
+
+      // Update the HP states 
       SetHpValue(currentUserHP);
       console.log(currentUserHP);
+
+      // Use the removeItem method to delete the users variables/objects in the localStorage 
       localStorage.removeItem('currentUser');
       localStorage.removeItem('loggedIn');
+
+      // Navigate the user to register again 
       navigate('/reg');
+
+      // Inform the user, user has been deleted 
       alert('delete user');
     }
   };
 
+  // Logout function, when turning off the light 
   const handleLogOut = () => {
     alert('See you later');
+    // Use remove items to delete the currentUser & loggedIn boolean 
     localStorage.removeItem('currentUser');
     localStorage.removeItem('loggedIn');
+
+    // Navigate back to the login page 
     navigate('/');
   };
-  // TASUKU STATE
 
   return (
     <div className="stage">

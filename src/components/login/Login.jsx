@@ -2,8 +2,8 @@
 import "./login.css";
 
 // React liberties 
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // importing the login button
 import { BtnPrimary, ShifterBtn } from '../assets/Buttons';
