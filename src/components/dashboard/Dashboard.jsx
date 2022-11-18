@@ -67,7 +67,7 @@ const Dashboard = () => {
     (element) => element.email === currentUserEntry
   );
 
-  // Store the LS information in the following variables:
+  // Store the localStorage information in the following variables:
   let task = localEntry[index].task;
   let userName = localEntry[index].userName;
   let currentUserHP = localEntry[index].hp;
@@ -230,8 +230,8 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="stage">
-      <div className="top-stage"></div>
+    <div className="page-container dashboard-page">
+      {/* <div className="top-stage"></div> */}
       {task === '' && (
         <BubbleKichi
           text={welcome}
