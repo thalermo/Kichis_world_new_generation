@@ -248,7 +248,7 @@ const Dashboard = () => {
         )}
 
         {task !== '' && showQuote === true && (
-          <div className="bubble_speech--dash ">
+          <div className="prompt__bubble-speech dashboard-page ">
             <div className="type_effect--dash quote">{quote}</div>
           </div>
         )}
@@ -295,11 +295,11 @@ const Dashboard = () => {
         />
         <div className="buttons-container">
           <MinusButton action={handleFailed} task={task} />
+          <Tasuku action={handleClick} task={task} />
           <PlusButton action={handleComplete} task={task} />
         </div>
 
         {/* <TurnonBtn action={handleLogOut} /> */}
-        <Tasuku action={handleClick} task={task} />
 
       </div>
     </div>

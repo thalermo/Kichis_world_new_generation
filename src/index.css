@@ -151,6 +151,10 @@ body {
   margin: 0.5rem;
 }
 
+.primary-btn.tasuku-btn:hover {
+  background-color: #ffff00;
+}
+
 /* KICHIS LOGO */
 /* todo export this feature to a separate component */
 .kichi-logo {

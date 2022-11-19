@@ -53,7 +53,7 @@ export const Tasuku = (props) => {
   return (
     <button
       onClick={props.action}
-      className={props.task === '' ? 'submit-btn' : 'submit-btn hide'}
+      className={props.task === '' ? 'primary-btn tasuku-btn' : 'primary-btn hide'}
       //todo: check this enter ID. i don't know what is doing but it shift the layout down
       id="enter"
       disabled={props.task !== ''}

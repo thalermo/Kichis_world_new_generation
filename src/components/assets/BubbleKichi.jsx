@@ -21,7 +21,7 @@ function BubbleKichi(props) {
 
   // (render)
   return (
-    <div className="bubble_speech--dash">
+    <div className="prompt__bubble-speech dashboard-page">
       {counter <= 1 && props.now === props.regDate && (
         <div className="type_effect--dash">{props.text[counter].phrase[0]}</div>
       )}
