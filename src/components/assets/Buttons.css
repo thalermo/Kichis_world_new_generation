@@ -8,40 +8,16 @@
   font-size: 20px;
 }
 
-.plus-minus--buttons {
-  display: flex;
-  justify-content: space-evenly;
-  width: max-content;
-  height: max-content;
-  margin-top: 25rem;
-  margin-left: 1.5rem;
-}
-
 /*! Plus Minus Btns */
+
 .video-game-button {
-  text-shadow: 1px 1px pink, -1px -1px maroon;
-  font-size: 7rem;
-  border-radius: 100%;
-  font-family: 'Press Start 2p';
-  line-height: 5em;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10rem;
-  height: 10rem;
   -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
   -o-border-radius: 0.75em;
-  border-radius: 20em;
-  background-color: red;
   -webkit-box-shadow: 0 0.2em maroon;
   -moz-box-shadow: 0 0.2em maroon;
   -o-box-shadow: 0 0.2em maroon;
   box-shadow: 0 0.2em maroon;
-  color: red;
-  margin: 5px;
-  background-color: red;
   background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
   background-image: -moz-linear-gradient(
     left top,
@@ -56,59 +32,29 @@
     maroon 99%
   );
   background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+
+  font-size: 6rem;
+  z-index: 1;
+  padding: 5rem 5rem;
+  border-radius: 100%;
+  background-size: cover;
   cursor: pointer;
-  padding-left: 5px;
 }
 
 .video-game-button.plus {
-  background: url(../assets/images/icons/thumbs_up.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  font-size: 8rem;
-  margin-left: -8rem;
-  z-index: 1;
+  background-image: url(../assets/images/icons/thumbs_up.png);
 }
 
 .video-game-button.plus:hover {
-  background: url(../assets/images/icons/thumbs_up_hover_vol2.png);
-  background-repeat: no-repeat;
-  background-size: 99%;
-  z-index: 1;
-
-  /* max-width: 80rem; */
-  /* -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  /* Animation Figure*/
-  /* animation: pulse 2.5s infinite;  */
+  background-image: url(../assets/images/icons/thumbs_up_hover_vol2.png);
 }
 
 .video-game-button.minus {
-  background: url(../assets/images/icons/thumbs_down.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 110%;
-  font-size: 8rem;
-  margin-right: -6rem;
-  z-index: 1;
+  background-image: url(../assets/images/icons/thumbs_down.png);
 }
 
 .video-game-button.minus:hover {
-  background: url(../assets/images/icons/thumbs_up_hover_vol3.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110%;
-  z-index: 1;
-
-  /* max-width: 80rem; */
-  /* -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  /* Animation Figure*/
-  /* animation: pulse 2.5s infinite;  */
+  background-image: url(../assets/images/icons/thumbs_up_hover_vol3.png);
 }
 
 .StartButton_container {

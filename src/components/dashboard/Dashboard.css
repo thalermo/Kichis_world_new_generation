@@ -4,19 +4,26 @@
   background-size: cover;
 }
 
-.figure-btns-wrapper {
-  width: 70vw;
+.top-stage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  width: 90%;
 }
 
-.bubble_speech--dash {
-  display: grid;
-  place-items: center;
+.buttons-container {
+  min-width: 40rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  /* border: 2px solid green; */
+  /* background-color: bisque; */
+}
 
-  width: 50%;
+.prompt__bubble-speech.dashboard-page {
+  width: 70%;
   min-width: 48rem;
   min-height: 20rem;
 
@@ -101,19 +108,10 @@ input::placeholder {
 }
 
 .turnon-image:hover {
-  /* background: url(../assets/images/switch_on_hover_vol.2.png); */
   background: url(../assets/images/icons/switch_on_hover_vol.2.png);
   background-repeat: no-repeat;
   background-size: 100%;
   cursor: pointer;
-
-  /* max-width: 80rem; */
-  /* -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; */
-  /* Animation Figure*/
-  /* animation: pulse 2.5s infinite; */
 }
 
 .submit-btn#enter {

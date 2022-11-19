@@ -92,7 +92,6 @@ const Dashboard = () => {
     //setShow(false);
   }
 
-
   // PROMPT TRIGGER by clicking on the figure 
   const handleFigureClick = () => {
     setIndexCounter((pervValue) => pervValue + 1)
@@ -231,75 +230,78 @@ const Dashboard = () => {
 
   return (
     <div className="page-container dashboard-page">
-      {/* <div className="top-stage"></div> */}
-      {task === '' && (
-        <BubbleKichi
-          text={welcome}
-          indexCounter={indexCounter}
-          now={now}
-          regDate={regDate}
-        />
-      )}
+      <div className="top-stage">
 
-      {task !== '' && showQuote === false && (
-        <div className="bubble_speech--dash">
-          <div className="type_effect--dash">{`${userName.toUpperCase()} Your Daily Tasuku: ${task.toUpperCase()}`}</div>
-        </div>
-      )}
+        {task === '' && (
+          <BubbleKichi
+            text={welcome}
+            indexCounter={indexCounter}
+            now={now}
+            regDate={regDate}
+          />
+        )}
 
-      {task !== '' && showQuote === true && (
-        <div className="bubble_speech--dash ">
-          <div className="type_effect--dash quote">{quote}</div>
-        </div>
-      )}
+        {task !== '' && showQuote === false && (
+          <div className="prompt__bubble-speech dashboard-page">
+            <div className="type_effect--dash">{`${userName.toUpperCase()} Your Daily Tasuku: ${task.toUpperCase()}`}</div>
+          </div>
+        )}
 
-      <div className="figure-btns-wrapper">
-        <div className="starts-container1">
-          <div
-            className={
-              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
-            }
-            disabled={currentUserHP < 6}
-          />
-          <div
-            className={
-              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
-            }
-            disabled={currentUserHP < 6}
-          />
-          <div
-            className={
-              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
-            }
-            disabled={currentUserHP < 6}
-          />
-          <div
-            className={
-              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
-            }
-            disabled={currentUserHP < 6}
-          />
-          <div
-            className={
-              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
-            }
-            disabled={currentUserHP < 6}
-          />
-        </div>
+        {task !== '' && showQuote === true && (
+          <div className="bubble_speech--dash ">
+            <div className="type_effect--dash quote">{quote}</div>
+          </div>
+        )}
 
-        <MinusButton action={handleFailed} task={task} />
+        {/* <div className="figure-btns-wrapper"> */}
+        {/* <div className="starts-container1">
+          <div
+            className={
+              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
+            }
+            disabled={currentUserHP < 6}
+          />
+          <div
+            className={
+              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
+            }
+            disabled={currentUserHP < 6}
+          />
+          <div
+            className={
+              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
+            }
+            disabled={currentUserHP < 6}
+          />
+          <div
+            className={
+              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
+            }
+            disabled={currentUserHP < 6}
+          />
+          <div
+            className={
+              currentUserHP < 6 ? 'motivation-star hidden' : 'motivation-star'
+            }
+            disabled={currentUserHP < 6}
+          />
+        </div> */}
+
 
         <Kichi
           hpValue={hpValue}
           // SetHpValue={SetHpValue}
           action={handleFigureClick}
         />
+        <div className="buttons-container">
+          <MinusButton action={handleFailed} task={task} />
+          <PlusButton action={handleComplete} task={task} />
+        </div>
 
-        <PlusButton action={handleComplete} task={task} />
-        <TurnonBtn action={handleLogOut} />
+        {/* <TurnonBtn action={handleLogOut} /> */}
+        <Tasuku action={handleClick} task={task} />
+
       </div>
-
-      <Tasuku action={handleClick} task={task} />
     </div>
   );
 };

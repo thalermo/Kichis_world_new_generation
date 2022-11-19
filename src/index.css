@@ -17,9 +17,6 @@
   font-style: normal;
 }
 
-html {
-}
-
 body {
   background-color: cornsilk;
 }
@@ -47,7 +44,6 @@ body {
   padding-inline: 1rem;
   padding-block-end: 1rem;
 
-  /* border: #ff0000 solid 2px; */
   border-radius: 20px;
   box-sizing: border-box;
   background: rgba(236, 240, 243, 0.184);
