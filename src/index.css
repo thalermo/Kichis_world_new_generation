@@ -187,6 +187,10 @@ body {
 
 /* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
 @media screen and (max-width: 600px) {
+  .top-stage {
+    gap: 2rem;
+  }
+
   .prompt__bubble-speech {
     background-size: 100% 90%;
   }

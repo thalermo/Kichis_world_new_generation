@@ -35,7 +35,7 @@
 
   font-size: 6rem;
   z-index: 1;
-  padding: 5rem 5rem;
+  padding: 5rem;
   border-radius: 100%;
   background-size: cover;
   cursor: pointer;
@@ -55,6 +55,13 @@
 
 .video-game-button.minus:hover {
   background-image: url(../assets/images/icons/thumbs_up_hover_vol3.png);
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
+@media screen and (max-width: 1024px) {
+  .video-game-button {
+    padding: 4rem;
+  }
 }
 
 .StartButton_container {

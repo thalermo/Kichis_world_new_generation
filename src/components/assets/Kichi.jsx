@@ -4,6 +4,7 @@ import kichi2hp from '../../images/kichi2hp.png';
 import kichi1hp from '../../images/kichi1hp.png';
 import './kichi.css';
 
+
 const Kichi = (props) => {
   return (
     // wrap it in a div so I can add the onClick attribute

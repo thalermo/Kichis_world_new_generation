@@ -16,27 +16,27 @@ function BubbleKichi(props) {
   return (
     <div className="prompt__bubble-speech dashboard-page">
       {counter <= 1 && props.now === props.regDate && (
-        <div className="type_effect--dash">{props.text[counter].phrase[0]}</div>
+        <div className="type_effect--dash title">{props.text[counter].phrase[0]}</div>
       )}
 
       {counter <= 1 && props.now !== props.regDate && (
-        <div className="type_effect--dash">{props.text[counter].phrase[1]}</div>
+        <div className="type_effect--dash title">{props.text[counter].phrase[1]}</div>
       )}
 
       {props.indexCounter >= 2 && props.now === props.regDate && (
-        <div className="type_effect--dash">
+        <div className="type_effect--dash title">
           {props.text[props.indexCounter].phrase[0]}
         </div>
       )}
 
       {props.indexCounter >= 2 && props.now !== props.regDate && (
-        <div className="type_effect--dash">
+        <div className="type_effect--dash title">
           {props.text[props.indexCounter].phrase[1]}
         </div>
       )}
 
       {props.indexCounter >= 2 && props.now !== props.regDate && (
-        <div className="type_effect--dash">
+        <div className="type_effect--dash title">
           {props.text[props.indexCounter].phrase[1]}
         </div>
       )}

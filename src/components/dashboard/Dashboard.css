@@ -14,16 +14,21 @@
 }
 
 .buttons-container {
-  /* min-width: 40rem; */
 }
 
 .prompt__bubble-speech.dashboard-page {
   width: 70%;
   min-width: 48rem;
   min-height: 20rem;
-
   background-image: url(../assets/images/icons/Speech_bubble_white.png);
   background-size: 100% 105%;
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
+@media screen and (max-width: 600px) {
+  .prompt__bubble-speech.dashboard-page {
+    min-width: 100%;
+  }
 }
 
 /* Animation typing text */
