@@ -299,7 +299,7 @@ const Dashboard = () => {
           <PlusButton action={handleComplete} task={task} />
         </div>
 
-        {/* <TurnonBtn action={handleLogOut} /> */}
+        <TurnonBtn action={handleLogOut} />
 
       </div>
     </div>

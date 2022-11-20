@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
+  position: relative;
 }
 
 .buttons-container {
@@ -91,21 +92,28 @@ input::placeholder {
 }
 
 .turnon-image {
-  width: 10rem;
-  height: 10rem;
-  /* background-image: url(/src/images/switch_on_pixelv4.png); */
+  position: absolute;
+  right: 10%;
+  top: 25%;
   background-image: url(../assets/images/icons/switch_on_pixelv4.png);
-  background-size: 10rem;
   background-repeat: no-repeat;
-  margin-bottom: 30rem;
-  margin-right: -10rem;
+  width: 10%;
+  height: 10rem;
+  background-size: contain;
+  cursor: pointer;
 }
 
 .turnon-image:hover {
-  background: url(../assets/images/icons/switch_on_hover_vol.2.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  cursor: pointer;
+  background-image: url(../assets/images/icons/switch_on_hover_vol.2.png);
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
+@media screen and (max-width: 1024px) {
+  .turnon-image {
+    right: -15px;
+    top: 25%;
+    width: 15%;
+  }
 }
 
 .submit-btn#enter {

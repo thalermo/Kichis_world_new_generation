@@ -3,7 +3,6 @@ import kichi3hp from '../../images/kichi3hp.png';
 import kichi2hp from '../../images/kichi2hp.png';
 import kichi1hp from '../../images/kichi1hp.png';
 import './kichi.css';
-//import { useState } from 'react';
 
 const Kichi = (props) => {
   return (
