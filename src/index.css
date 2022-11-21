@@ -109,35 +109,6 @@ body {
   margin-block-end: 4rem;
 }
 
-/* PRIMARY BUTTON
-.primary-btn {
-  cursor: pointer;
-  font-size: 2.5rem;
-  padding: 1rem 5rem;
-  border: 3px solid black;
-  transition: all 0.2s;
-}
-
-.primary-btn:hover {
-  font-size: 3rem;
-
-  box-shadow: 1rem 0.4rem 0 rgb(0, 0, 0);
-  transform: translate(-0.4rem, -0.4rem);
-  border: dotted black 4px;
-}
-
-.primary-btn:active {
-  box-shadow: 0 0 0 black;
-  transform: translate(0, 0);
-}
-
-.primary-btn.signup-btn:hover {
-  background-color: #cbced1;
-}
-.primary-btn.login-btn:hover {
-  color: azure;
-  background-color: #e081c0;
-} */
 /* SHIFTER BUTTON */
 .shifter-btn {
   width: 8rem;
@@ -149,10 +120,6 @@ body {
   right: 0;
   bottom: 0;
   margin: 0.5rem;
-}
-
-.primary-btn.tasuku-btn:hover {
-  background-color: #ffff00;
 }
 
 /* KICHIS LOGO */
@@ -203,17 +170,6 @@ body {
   .shifter-btn {
     width: 6rem;
     height: 6rem;
-  }
-
-  .primary-btn {
-    font-size: 1.8rem;
-  }
-  .primary-btn:hover {
-    font-size: 2.2rem;
-  }
-
-  .primary-btn.signup-btn {
-    padding-inline: 3.5rem;
   }
 
   .kichi-logo {

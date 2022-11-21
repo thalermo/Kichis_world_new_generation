@@ -27,3 +27,21 @@
   color: azure;
   background-color: #e081c0;
 }
+
+.primary-btn.tasuku-btn:hover {
+  background-color: #ffff00;
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
+@media screen and (max-width: 600px) {
+  .primary-btn {
+    font-size: 1.8rem;
+  }
+  .primary-btn:hover {
+    font-size: 2.2rem;
+  }
+
+  .primary-btn.signup-btn {
+    padding-inline: 3.5rem;
+  }
+}
