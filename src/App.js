@@ -2,12 +2,11 @@
 import { Routes, Route } from 'react-router-dom';
 
 // Pages components
-import Login from './components/login/Login';
-import Registration from './components/registration/Registration';
-import Dashboard from "./components/dashboard/Dashboard.jsx"
-import GameOver from './components/gameover/GameOver';
-
-import Todo from './components/assets/Todo';
+import Login from "./components/pages/login/Login.jsx"
+import Registration from './components/pages/registration/Registration';
+import Dashboard from "./components/pages/dashboard/Dashboard.jsx"
+import GameOver from './components/pages/gameover/GameOver';
+import Todo from "./components/pages/todo/Todo.jsx"
 
 // CSS files:
 

@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'retro-gaming';
-  src: url(/src/fonts/Retro_Gaming.ttf);
+  src: url(/src/assets/fonts/Retro_Gaming.ttf);
   font-style: normal;
 }
 
@@ -165,7 +165,7 @@ body {
   height: 15rem;
   width: 15rem;
 
-  background: url('../src/components/assets/images/figure/Kich_pixel.png');
+  background: url('../src/assets/images/figure/Kich_pixel.png');
   background-position: center;
   background-size: 70%;
   background-repeat: no-repeat;

@@ -1,0 +1,22 @@
+/* Sign up page container modification */
+/* changing the wallpaper and add gradient */
+.page-container.registration-page {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)),
+    url(../../../assets/images/background/welcome_image.png);
+
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+/* Bubble chat modification */
+.prompt__bubble-speech.registration-page {
+  background-image: url(../../../assets/images/icons/Speech_bubble_upside_down.png);
+  padding-block-start: 1.4rem;
+}
+
+/* Bubble chat - prompt text modification */
+.prompt__bubble-speech.registration-page > .title {
+  margin-top: 9.5rem;
+  font-size: 2.5rem;
+}
