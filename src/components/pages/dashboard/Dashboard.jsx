@@ -1,5 +1,6 @@
 // Style Sheets:
 import "./dashboard.css";
+import "../../ui/buttons/thumbsButton.css"
 
 // React liberties 
 import React, { useState } from 'react';
@@ -12,9 +13,11 @@ import welcome from '../../../utils/welcome_text';
 import BubbleKichi from '../../ui/BubbleKichi';
 
 // just the figure with a click function
-import Kichi from "../../ui/Kichi"
 // the btns components
-import { MinusButton, PlusButton, Tasuku, TurnonBtn } from '../../ui/Buttons';
+import { TurnonBtn } from '../../ui/Buttons';
+
+// UI COMPONENTS 
+import Kichi from "../../ui/Kichi"
 import ThumbsButton from "../../ui/buttons/ThumbsButton"
 
 
@@ -23,6 +26,7 @@ import {
   shortQuotes,
   getRandomQuote,
 } from "../../../utils/motivationalQuotes"
+import PrimaryButton from "../../ui/buttons/PrimaryButton";
 
 
 function Dashboard() {
@@ -292,9 +296,23 @@ function Dashboard() {
           action={handleFigureClick}
         />
         <div className="buttons-container">
-          <ThumbsButton action={handleFailed} task={task} feedback="minus-grid minus" />
-          <Tasuku action={handleClick} task={task} />
-          <ThumbsButton action={handleComplete} task={task} feedback="plus-grid plus" />
+
+          <ThumbsButton
+            action={handleFailed}
+            task={task}
+            feedback="minus-grid minus" />
+
+          <PrimaryButton
+            handleClick={handleClick}
+            title="TASUKU"
+            className={task === '' ? 'primary-btn tasuku-btn' : 'primary-btn hide'}
+          />
+
+          <ThumbsButton
+            action={handleComplete}
+            task={task}
+            feedback="plus-grid plus" />
+
         </div>
 
         <TurnonBtn action={handleLogOut} />

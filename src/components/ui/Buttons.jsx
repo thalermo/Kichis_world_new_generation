@@ -1,37 +1,37 @@
 import "./buttons.css"
 
-export const PlusButton = (props) => {
-  return (
+// export const PlusButton = (props) => {
+//   return (
 
-    <button
-      onClick={props.action}
-      className={
-        props.task !== ''
-          ? 'video-game-button plus-grid plus '
-          : 'video-game-button plus-grid plus hide'
-      }
-      // falsy value ↩️
-      disabled={props.task === ''}
-    ></button>
+//     <button
+//       onClick={props.action}
+//       className={
+//         props.task !== ''
+//           ? 'video-game-button plus-grid plus '
+//           : 'video-game-button plus-grid plus hide'
+//       }
+//       // falsy value ↩️
+//       disabled={props.task === ''}
+//     ></button>
 
-  );
-};
+//   );
+// };
 
-export const MinusButton = (props) => {
-  return (
+// export const MinusButton = (props) => {
+//   return (
 
-    <button
-      onClick={props.action}
-      className={
-        props.task !== ''
-          ? 'video-game-button minus-grid minus '
-          : 'video-game-button minus-grid minus hide'
-      }
-      disabled={props.task === ''}
-    ></button>
+//     <button
+//       onClick={props.action}
+//       className={
+//         props.task !== ''
+//           ? 'video-game-button minus-grid minus '
+//           : 'video-game-button minus-grid minus hide'
+//       }
+//       disabled={props.task === ''}
+//     ></button>
 
-  );
-};
+//   );
+// };
 
 export const SelectButton = () => {
   return (
@@ -49,19 +49,7 @@ export const SubmitBtn = () => {
   return <button className="submit-btn ">SUBMIT</button>;
 };
 
-export const Tasuku = (props) => {
-  return (
-    <button
-      onClick={props.action}
-      className={props.task === '' ? 'primary-btn tasuku-btn' : 'primary-btn hide'}
-      //todo: check this enter ID. i don't know what is doing but it shift the layout down
-      id="enter"
-      disabled={props.task !== ''}
-    >
-      TASUKU
-    </button>
-  );
-};
+
 
 export const TodoBtn = (props) => {
   return (

@@ -1,12 +1,14 @@
 // Style Sheets:
 import "./login.css";
+import "../../ui/buttons/primaryButton.css"
 
 // React liberties 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // importing the login button
-import { BtnPrimary, ShifterBtn } from "../../ui/Buttons"
+import { ShifterBtn } from "../../ui/Buttons"
+import PrimaryButton from "../../ui/buttons/PrimaryButton"
 
 
 function Login() {
@@ -190,7 +192,9 @@ function Login() {
           </div>
 
           <div className="input-field">
-            <BtnPrimary className="primary-btn login-btn"
+
+            <PrimaryButton
+              className="primary-btn login-btn"
               handleClick={handleLogin}
               title="LOGIN"
             />

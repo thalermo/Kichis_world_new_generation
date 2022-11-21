@@ -1,10 +1,14 @@
 // CSS Stylesheets
 import './registration.css';
-import { BtnPrimary, ShifterBtn } from '../../ui/Buttons';
+import "../../ui/buttons/primaryButton.css"
+import { ShifterBtn } from '../../ui/Buttons';
 
 // React libraries 
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// UI Components
+import PrimaryButton from '../../ui/buttons/PrimaryButton';
 
 
 function Registration() {
@@ -246,14 +250,13 @@ function Registration() {
             <small>{eConPassword}</small>
           </div>
           <div className="input-field">
-            {/* <button className="submit-btn reg" onClick={validate}>
-              SUBMIT
-            </button> */}
-            <BtnPrimary
+
+            <PrimaryButton
               className="primary-btn signup-btn"
               handleClick={validate}
               title="SIGN UP"
             />
+
           </div>
         </form>
         <ShifterBtn
