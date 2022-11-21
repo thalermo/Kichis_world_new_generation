@@ -15,6 +15,7 @@ import BubbleKichi from '../../ui/BubbleKichi';
 import Kichi from "../../ui/Kichi"
 // the btns components
 import { MinusButton, PlusButton, Tasuku, TurnonBtn } from '../../ui/Buttons';
+import ThumbsButton from "../../ui/buttons/ThumbsButton"
 
 
 import {
@@ -291,9 +292,9 @@ function Dashboard() {
           action={handleFigureClick}
         />
         <div className="buttons-container">
-          <MinusButton action={handleFailed} task={task} />
+          <ThumbsButton action={handleFailed} task={task} feedback="minus-grid minus" />
           <Tasuku action={handleClick} task={task} />
-          <PlusButton action={handleComplete} task={task} />
+          <ThumbsButton action={handleComplete} task={task} feedback="plus-grid plus" />
         </div>
 
         <TurnonBtn action={handleLogOut} />

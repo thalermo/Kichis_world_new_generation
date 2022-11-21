@@ -1,0 +1,63 @@
+.video-game-button {
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  -webkit-box-shadow: 0 0.2em maroon;
+  -moz-box-shadow: 0 0.2em maroon;
+  -o-box-shadow: 0 0.2em maroon;
+  box-shadow: 0 0.2em maroon;
+  background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+  background-image: -moz-linear-gradient(
+    left top,
+    pink 3%,
+    red 22%,
+    maroon 99%
+  );
+  background-image: -webkit-linear-gradient(
+    left top,
+    pink 3%,
+    red 22%,
+    maroon 99%
+  );
+  background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+
+  font-size: 6rem;
+  z-index: 1;
+  padding: 5rem;
+  border-radius: 100%;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.video-game-button.plus {
+  background-image: url(../../../assets/images/icons/thumbs_up.png);
+}
+
+.video-game-button.plus:hover {
+  background-image: url(../../../assets/images/icons/thumbs_up_hover_vol2.png);
+}
+
+.video-game-button.minus {
+  background-image: url(../../../assets/images/icons/thumbs_down.png);
+}
+
+.video-game-button.minus:hover {
+  background-image: url(../../../assets/images/icons/thumbs_up_hover_vol3.png);
+}
+
+.hide {
+  opacity: 0;
+}
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
+@media screen and (max-width: 1024px) {
+  .video-game-button {
+    padding: 4rem;
+  }
+
+  .video-game-button:active,
+  .start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 0.2em;
+  }
+}
