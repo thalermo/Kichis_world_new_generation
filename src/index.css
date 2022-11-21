@@ -9,6 +9,10 @@
 
 :root {
   --transition: all 400ms ease;
+  --bg-color: rgb(255, 255, 255);
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 24;
+  --font-size: 2.4rem;
 }
 
 @font-face {
@@ -104,9 +108,10 @@ body {
 
 /* Bubble chat - prompt */
 .prompt__bubble-speech > .title {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   text-align: center;
   margin-block-end: 4rem;
+  width: max-content;
 }
 
 /* SHIFTER BUTTON */
@@ -143,6 +148,63 @@ body {
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 0px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px;
 }
+
+/* ===================== STARTS TYPE EFFECT CLASS ==================== */
+
+.type_effect {
+  position: relative;
+  margin-block-end: 2rem;
+  margin-inline: auto;
+
+  font-size: var(--font-size);
+  width: max-content;
+  background: var(--bg-color);
+}
+
+.type_effect::before,
+.type_effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.type_effect::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.type_effect::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== END TYPE EFFECT CLASS ==================== */
 
 /* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
 @media screen and (max-width: 1024px) {

@@ -1,38 +1,5 @@
 import "./buttons.css"
 
-// export const PlusButton = (props) => {
-//   return (
-
-//     <button
-//       onClick={props.action}
-//       className={
-//         props.task !== ''
-//           ? 'video-game-button plus-grid plus '
-//           : 'video-game-button plus-grid plus hide'
-//       }
-//       // falsy value ↩️
-//       disabled={props.task === ''}
-//     ></button>
-
-//   );
-// };
-
-// export const MinusButton = (props) => {
-//   return (
-
-//     <button
-//       onClick={props.action}
-//       className={
-//         props.task !== ''
-//           ? 'video-game-button minus-grid minus '
-//           : 'video-game-button minus-grid minus hide'
-//       }
-//       disabled={props.task === ''}
-//     ></button>
-
-//   );
-// };
-
 export const SelectButton = () => {
   return (
     <div className="StartButton_container">
