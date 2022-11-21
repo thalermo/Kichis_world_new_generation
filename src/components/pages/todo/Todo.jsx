@@ -1,12 +1,15 @@
 // Style sheets 
 import './todo.css';
+import "../../ui/buttons/primaryButton.css"
+import "../../ui/buttons/shifterButton.css"
 
 // React liberties 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // import UI components 
-import { ShifterBtn, TodoBtn } from '../../ui/Buttons';
+import ShifterButton from "../../ui/buttons/ShifterButton";
+import PrimaryButton from "../../ui/buttons/PrimaryButton";
 
 function Todo() {
 
@@ -104,9 +107,14 @@ function Todo() {
               setOneTask(e.target.value);
             }}
           />
-          <TodoBtn action={addTask} />
-          <ShifterBtn
-            className="returnIcon"
+          <PrimaryButton
+            handleClick={addTask}
+            title="SET TASUKU"
+            className="primary-btn set-tasuku-btn"
+          />
+
+          <ShifterButton
+            className="shifter-btn return-btn"
             action={handleReturnEntry}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}

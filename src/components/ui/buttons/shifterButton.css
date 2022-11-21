@@ -1,0 +1,32 @@
+/* SHIFTER BUTTON */
+.shifter-btn {
+  width: 8rem;
+  height: 8rem;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0.5rem;
+}
+
+.shifter-btn.return-btn {
+  background-image: url(../../../assets/images/icons/home_icon.png);
+  width: 6rem;
+  height: 6rem;
+  bottom: -3%;
+  left: 88%;
+}
+
+.shifter-btn.return-btn:hover {
+  background-image: url(../../../assets/images/icons/home_icon_hover_vol1.png);
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
+@media screen and (max-width: 600px) {
+  .shifter-btn {
+    width: 6rem;
+    height: 6rem;
+  }
+}

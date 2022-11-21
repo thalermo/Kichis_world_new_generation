@@ -57,13 +57,6 @@
   background-image: url(../../assets/images/icons/thumbs_up_hover_vol3.png);
 }
 
-/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
-@media screen and (max-width: 1024px) {
-  .video-game-button {
-    padding: 4rem;
-  }
-}
-
 .StartButton_container {
   width: 12%;
 }
@@ -115,22 +108,14 @@
   background-image: url(../../assets/images/icons/login_icon_vol3.png);
 }
 
-.returnIcon {
-  background-image: url(../../assets/images/icons/home_icon.png);
-  width: 6rem;
-  height: 6rem;
-  background-size: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 1rem;
-  margin: 1rem;
-}
-
-.returnIcon:hover {
-  background-image: url(../../assets/images/icons/home_icon_hover_vol1.png);
-}
-
 /* hide class to control the option to click*/
 .hide {
   opacity: 0;
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) =========================*/
+@media screen and (max-width: 1024px) {
+  .video-game-button {
+    padding: 4rem;
+  }
 }

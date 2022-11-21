@@ -34,17 +34,6 @@ export const TurnonBtn = (props) => {
   return <div className="turnon-image" onClick={props.action} />;
 };
 
-// Shift to registration page, Login page or Logout from the app 
-export const ShifterBtn = (props) => {
-  return (
-    <div
-      className={props.className}
-      onClick={props.action}
-      onMouseOver={props.onMouseOver}
-      onMouseOut={props.onMouseOut}
-    />
-  );
-};
 
 
 export const BtnPrimary = (props) => {

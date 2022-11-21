@@ -7,8 +7,9 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // importing the login button
-import { ShifterBtn } from "../../ui/Buttons"
-import PrimaryButton from "../../ui/buttons/PrimaryButton"
+import { ShifterBtn } from "../../ui/Buttons";
+import PrimaryButton from "../../ui/buttons/PrimaryButton";
+import ShifterButton from "../../ui/buttons/ShifterButton";
 
 
 function Login() {
@@ -200,7 +201,7 @@ function Login() {
             />
           </div>
         </div>
-        <ShifterBtn
+        <ShifterButton
           action={handleRegisterEntry}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}

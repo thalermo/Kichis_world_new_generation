@@ -2,6 +2,7 @@
 import './registration.css';
 import "../../ui/buttons/primaryButton.css"
 import { ShifterBtn } from '../../ui/Buttons';
+import ShifterButton from '../../ui/buttons/ShifterButton';
 
 // React libraries 
 import { useState, useEffect } from 'react';
@@ -259,7 +260,7 @@ function Registration() {
 
           </div>
         </form>
-        <ShifterBtn
+        <ShifterButton
           className="shifter-btn login-icon"
           action={handleLogInEntry}
           onMouseOver={handleMouseOver}

@@ -32,6 +32,18 @@
   background-color: #ffff00;
 }
 
+.primary-btn.set-tasuku-btn {
+  font-size: 2rem;
+  margin-block-start: 2rem;
+}
+
+.primary-btn.set-tasuku-btn:hover {
+  font-size: 2.3rem;
+  background: #8aa9df90;
+  color: white;
+  text-shadow: 4px 3px 0px #6a6a6a;
+}
+
 /* ===================== MEDIA QUERIES (SMALL DEVICES) ========================= */
 @media screen and (max-width: 600px) {
   .primary-btn {
