@@ -148,7 +148,7 @@ const validate = () => {
 
 <details>
 
-![Responsiveness](/src/assets/images/screenshots/responsive.png)
+![Responsiveness](/src/assets/images/screenshots/localStorage.png)
 
 <p>Using localStorage to save the information of the user for the login</p>
 
