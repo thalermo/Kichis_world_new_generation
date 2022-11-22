@@ -27,7 +27,7 @@ This is my solution to the [Product preview card component challenge on Frontend
 npm install
 ```
 
-<br><hr>
+<hr>
 
 ![dashboard](/src/assets/images/screenshots/dashboard_small.png)
 
@@ -47,7 +47,7 @@ npm install
 <li>By completing the Tasukus, Kichi will start to recover, by not completing the Tasukus, Kichi will become sick and will die</li>
 </ol>
 </details>
-<br/><hr>
+<hr>
 
 ### Inspiration
 
