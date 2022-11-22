@@ -1,7 +1,7 @@
 // CSS Stylesheets
 import './registration.css';
 import "../../ui/buttons/primaryButton.css"
-import { ShifterBtn } from '../../ui/Buttons';
+// import { ShifterBtn } from '../../ui/Buttons';
 import ShifterButton from '../../ui/buttons/ShifterButton';
 
 // React libraries 

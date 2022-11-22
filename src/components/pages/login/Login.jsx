@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // importing the login button
-import { ShifterBtn } from "../../ui/Buttons";
+// import { ShifterBtn } from "../../ui/Buttons";
 import PrimaryButton from "../../ui/buttons/PrimaryButton";
 import ShifterButton from "../../ui/buttons/ShifterButton";
 
@@ -28,8 +28,8 @@ function Login() {
   const navigate = useNavigate();
 
   // Creating 2 empty variables 
-  let currentUser;
-  let currentUserHP;
+  // let currentUser;
+  // let currentUserHP;
 
   // Timer 8 sec to change the prompt to login instruction!
   useEffect(() => {
@@ -101,9 +101,9 @@ function Login() {
 
       // getting the info of the user from the local Storage
       //todo: why I can't update the state
-      currentUser = localEntry[index].userName;
+      // currentUser = localEntry[index].userName;
       //! access to HP value in the local storage
-      currentUserHP = localEntry[index].hp;
+      // currentUserHP = localEntry[index].hp;
       // console.log(currentUser);
       // console.log(localEntry);
       // console.log(currentUserEntry);
