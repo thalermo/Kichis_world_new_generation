@@ -27,7 +27,7 @@ This is my solution to the [Product preview card component challenge on Frontend
 npm install
 ```
 
-<br>
+<br><hr>
 
 ![dashboard](/src/assets/images/screenshots/dashboard_small.png)
 
@@ -47,7 +47,7 @@ npm install
 <li>By completing the Tasukus, Kichi will start to recover, by not completing the Tasukus, Kichi will become sick and will die</li>
 </ol>
 </details>
-<br/>
+<br/><hr>
 
 ### Inspiration
 
@@ -229,7 +229,7 @@ const validate = () => {
 - React.js
 - JavaScript
 
-  <hr><br>
+  <br><hr>
 
 ### What I learned
 
@@ -243,9 +243,9 @@ const validate = () => {
 
 I would like to continue maximizing the Sass use in the project by manufacturing the code by:
 
-1. Create a homepage with an introduction of the website
-2. Improve the game option by adding a screen to check the stats: points & completing tasks
-3. Continue manufacturing the code, make it dry but readable as possible
+- Create a homepage with an introduction of the website
+- Improve the game option by adding a screen to check the stats: points & completing tasks
+- Continue manufacturing the code, make it dry but readable as possible
 
 <hr><br>
 
