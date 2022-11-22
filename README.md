@@ -229,7 +229,7 @@ const validate = () => {
 - React.js
 - JavaScript
 
-  <br><hr>
+  <hr>
 
 ### What I learned
 
@@ -237,11 +237,9 @@ const validate = () => {
 - How to use the localStorage to win a stored data, that can be used also after refreshing the page
 - How to structure the React application with reusable components by using dynamic, conditional props
 
-<hr><br>
+<hr>
 
 ### Continued development
-
-I would like to continue maximizing the Sass use in the project by manufacturing the code by:
 
 - Create a homepage with an introduction of the website
 - Improve the game option by adding a screen to check the stats: points & completing tasks
