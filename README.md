@@ -229,6 +229,7 @@ const validate = () => {
 - CSS Grid
 - React.js
 - JavaScript
+- localStorage
 
 <hr>
 
