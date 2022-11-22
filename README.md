@@ -34,7 +34,7 @@ npm install
 ### How to play?
 
 <details>
-<ol>
+<ul>
 <li>Enter to the following website and click on the registration button</li>
 <li>After registration, you are ready to login into Kichi's world.</li>
 <li>On the main screen, the Dashboard, Kichi will greeting you and will ask you to click on her to get some more instructions.</li>
@@ -45,7 +45,7 @@ npm install
 <li>By not completing the task, you will los your starts, and Kich will start to feel not well.</li>
 <li>Still Kichi will motivate you, to try next day in with motivational quotes</li>
 <li>By completing the Tasukus, Kichi will start to recover, by not completing the Tasukus, Kichi will become sick and will die</li>
-</ol>
+</ul>
 </details>
 <hr>
 
