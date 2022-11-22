@@ -1,4 +1,4 @@
-<h1>Kichi's World - The next generation</h1>
+# [Kichi's World - The next generation ](https://kichisworld-next-generation.netlify.app 'check the website ')
 
 ![welcome](/src/assets/images/screenshots/welcome_banner.png)
 
@@ -7,21 +7,23 @@ Kichi's World is a gamify single daily task app. By completing your daily TASUKU
 </div>
 <br>
 
-<!-- Insert here the link for the website](https://). -->
+## ➡️ [Visit the website](https://kichisworld-next-generation.netlify.app 'visit the website ')
 
   <h2>Table of Contents</h2>
 
-- [How to install?](#how-to-install)
-- [How to play?](#how-to-play)
-- [Inspiration](#inspiration)
-- [Highlight of code snippets \& Screenshots](#highlight-of-code-snippets--screenshots)
-- [Built with](#built-with)
-- [What I learned](#what-i-learned)
-- [Continued development](#continued-development)
-- [Useful resources](#useful-resources)
-- [Author](#author)
+- [Kichi's World - The next generation ](#kichis-world---the-next-generation-)
+  - [➡️ Visit the website](#️-visit-the-website)
+    - [🧐 How to install?](#-how-to-install)
+    - [👾 How to play?](#-how-to-play)
+    - [🦋 Inspiration](#-inspiration)
+    - [🤓 Highlight of code snippets \& Screenshots](#-highlight-of-code-snippets--screenshots)
+    - [🌪️ Built with](#️-built-with)
+    - [🙇 What I learned](#-what-i-learned)
+    - [🙆 Continued development](#-continued-development)
+    - [💆 Useful resources](#-useful-resources)
+    - [👀 Author](#-author)
 
-### How to install?
+### 🧐 How to install?
 
 ```
 npm install
@@ -31,7 +33,7 @@ npm install
 
 ![dashboard](/src/assets/images/screenshots/dashboard_small.png)
 
-### How to play?
+### 👾 How to play?
 
 <details>
 <ul>
@@ -50,7 +52,7 @@ npm install
 
 <hr>
 
-### Inspiration
+### 🦋 Inspiration
 
   <details>
 
@@ -65,7 +67,7 @@ npm install
 
 </details><hr>
 
-### Highlight of code snippets & Screenshots
+### 🤓 Highlight of code snippets & Screenshots
 
 <summery>verification logic by registration</summery>
 
@@ -221,7 +223,7 @@ const validate = () => {
 
 <hr>
 
-### Built with
+### 🌪️ Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -233,7 +235,7 @@ const validate = () => {
 
 <hr>
 
-### What I learned
+### 🙇 What I learned
 
 - How to make a website responsive with small changes using grid, flex & media query
 - How to use the localStorage to win a stored data, that can be used also after refreshing the page
@@ -241,7 +243,7 @@ const validate = () => {
 
 <hr>
 
-### Continued development
+### 🙆 Continued development
 
 - Create a homepage with an introduction of the website
 - Improve the game option by adding a screen to check the stats: points & completing tasks
@@ -249,7 +251,7 @@ const validate = () => {
 
 <hr>
 
-### Useful resources
+### 💆 Useful resources
 
 - [Responsiveness ](https://www.youtube.com/watch?v=0ohtVzCSHqs&t=2s) - This helped me for the responsiveness in the website. I really recommend in general about Kevin Powell's content.
 - [LocalStorage](https://youtu.be/6eFwtaZf6zc) - This tutorial helped me to increase my knowledge and understanding the features of the localStorage, using the common methods:setItem,
@@ -257,6 +259,6 @@ const validate = () => {
 
 <hr>
 
-### Author
+### 👀 Author
 
 - LinkedIn - [@thaler_mo](https://www.linkedin.com/in/moran-thaler/)
