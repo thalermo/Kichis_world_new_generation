@@ -218,7 +218,7 @@ const validate = () => {
 
 </details>
 
-<hr><br>
+<hr>
 
 ### Built with
 
@@ -245,7 +245,7 @@ const validate = () => {
 - Improve the game option by adding a screen to check the stats: points & completing tasks
 - Continue manufacturing the code, make it dry but readable as possible
 
-<hr><br>
+<hr>
 
 ### Useful resources
 
@@ -253,7 +253,7 @@ const validate = () => {
 - [LocalStorage](https://youtu.be/6eFwtaZf6zc) - This tutorial helped me to increase my knowledge and understanding the features of the localStorage, using the common methods:setItem,
   getItem, removeItem, clear.
 
-<hr><br>
+<hr>
 
 ### Author
 
