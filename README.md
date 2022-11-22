@@ -7,7 +7,7 @@ Kichi's World is a gamify single daily task app. By completing your daily TASUKU
 </div>
 <br>
 
-<!-- This is my solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). -->
+<!-- Insert here the link for the website](https://). -->
 
   <h2>Table of Contents</h2>
 

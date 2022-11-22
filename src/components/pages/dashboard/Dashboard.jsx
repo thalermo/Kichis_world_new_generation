@@ -102,6 +102,7 @@ function Dashboard() {
   // Click on the Tasuku button will lead to the TODO PAGE
   const handleClick = () => {
     setStatus('tasuku');
+    console.log(status);
     navigate('/todo');
   };
 
