@@ -47,6 +47,7 @@ npm install
 <li>By completing the Tasukus, Kichi will start to recover, by not completing the Tasukus, Kichi will become sick and will die</li>
 </ul>
 </details>
+
 <hr>
 
 ### Inspiration
@@ -229,7 +230,7 @@ const validate = () => {
 - React.js
 - JavaScript
 
-  <hr>
+<hr>
 
 ### What I learned
 
